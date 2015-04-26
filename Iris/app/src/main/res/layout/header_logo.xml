@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="match_parent"
@@ -6,3 +7,51 @@
 
 
 </LinearLayout>
+=======
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:clickable="false"
+    android:focusable="false"
+    android:background="#ffffe9ba">
+
+    <ImageView
+        android:layout_width="83dp"
+        android:layout_height="83dp"
+        android:id="@+id/logoEYE"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logoeye"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="15dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="9dp"/>
+
+    <LinearLayout
+
+        android:layout_width="136dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stock"
+        android:id="@+id/button"
+        android:layout_margin="0dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSearch"
+        android:text="@string/search"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
+>>>>>>> 27/04/15      Создал фрагмент с логотипом, зарегал отдельный класс и связал с главной активностью/ Создал макет логотипа /временно изменил иконку приложения
