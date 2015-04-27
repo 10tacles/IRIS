@@ -20,16 +20,24 @@
 
         <!-- Этот слой для динамческого добавления фрагмента, на данный момент
         оставим на будущее, так как пока не знаю,
-         что расположить в верхнем правом углу -->
+         что расположить в верхнем правом углу
         <FrameLayout
             android:id="@+id/container_login"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
 
-        </FrameLayout>
-   </LinearLayout>
+        </FrameLayout>-->
 
+
+
+
+   </LinearLayout>
+    <fragment android:name="ru.tentacles.iris.fragments.bodyMainSalonFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout="@layout/body_main_salon"
+        android:id="@+id/fragment_body_main" />
 
 
 </LinearLayout>
