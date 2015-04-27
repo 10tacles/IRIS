@@ -7,6 +7,8 @@ import ru.tentacles.iris.R;
 
 //Главная активность для салонов красоты
 public class MainSalonActivity extends FragmentActivity{
+
+    //привязываем активность и слой main_salon
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

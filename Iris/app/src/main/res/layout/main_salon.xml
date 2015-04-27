@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
+    <!-- Главная разметка. Состоит из фрагментов-частей -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_salon">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-
         <fragment android:name="ru.tentacles.iris.fragments.headerLogoFragment"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/header_logo"
+            android:id="@+id/fragment_header_logo" />
+
+        <!-- Этот слой для динамческого добавления фрагмента, на данный момент
+        оставим на будущее, так как пока не знаю,
+         что расположить в верхнем правом углу -->
+        <FrameLayout
+            android:id="@+id/container_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        </FrameLayout>
+   </LinearLayout>
+
+
 
 </LinearLayout>
