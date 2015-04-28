@@ -3,6 +3,18 @@
     <string name="logo">logo</string>
     <string name="search">Поиск</string>
     <string name="stock">Акции</string>
+    <string name="hair">Волосы</string>
+    <string name="nails">Ногти</string>
+    <string name="eyebrows">Брови</string>
+    <string name="eyelashes">Ресницы</string>
+    <string name="solarium">Солярий</string>
+    <string name="massage">Массаж</string>
+    <string name="SPA">SPA</string>
+    <string name="depilation">Депиляция</string>
+    <string name="make_up">Визаж</string>
+    <string name="injections">Инъекции</string>
+    <string name="facial_treatments">Уход за лицом</string>
+    <string name="ear_piercing">Пирсинг</string>
 
 
 </resources>

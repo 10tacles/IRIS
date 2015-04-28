@@ -16,8 +16,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:text="New Button"
-        android:id="@+id/button2"
+        android:text="@string/hair"
+        android:id="@+id/hair"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:layout_marginRight="1dp"
@@ -26,15 +26,15 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:text="New Button"
-        android:id="@+id/button3"
+        android:text="@string/nails"
+        android:id="@+id/nails"
         android:layout_marginTop="10dp"
         android:layout_weight="1"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
-        android:text="New Button"
+        android:text="@string/eyebrows"
         android:id="@+id/button4"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
@@ -52,8 +52,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="New Button"
-            android:id="@+id/button5"
+            android:text="@string/eyelashes"
+            android:id="@+id/eyelashes"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="1dp"
@@ -62,16 +62,17 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="New Button"
-            android:id="@+id/button6"
+            android:text="@string/solarium"
+            android:id="@+id/solarium"
             android:layout_marginTop="10dp"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:singleLine="false" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="New Button"
-            android:id="@+id/button7"
+            android:text="@string/massage"
+            android:id="@+id/massage"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="1dp"
@@ -88,8 +89,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="New Button"
-            android:id="@+id/button8"
+            android:text="@string/SPA"
+            android:id="@+id/SPA"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="1dp"
@@ -98,16 +99,16 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="New Button"
-            android:id="@+id/button9"
+            android:text="@string/depilation"
+            android:id="@+id/depilation"
             android:layout_marginTop="10dp"
             android:layout_weight="1"/>
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="New Button"
-            android:id="@+id/button10"
+            android:text="@string/make_up"
+            android:id="@+id/make_up"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="1dp"
@@ -124,8 +125,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="New Button"
-            android:id="@+id/button11"
+            android:text="@string/injections"
+            android:id="@+id/injections"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="1dp"
@@ -135,8 +136,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="New Button"
-            android:id="@+id/button12"
+            android:text="@string/facial_treatments"
+            android:id="@+id/facial_treatments"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
             android:layout_weight="1"/>
@@ -144,8 +145,8 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
-            android:text="New Button"
-            android:id="@+id/button13"
+            android:text="@string/ear_piercing"
+            android:id="@+id/ear_piercing"
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:layout_marginLeft="1dp"
