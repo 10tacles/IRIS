@@ -2,44 +2,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffeecb"
+    android:background="#ffa06f46"
     android:clickable="false"
     android:baselineAligned="true">
+
 
     <LinearLayout
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-        android:layout_weight="1">
-
+    android:layout_weight="1">
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        style="@style/Buttons"
         android:text="@string/hair"
-        android:id="@+id/hair"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="1dp"
-        android:layout_weight="1"/>
+        android:id="@+id/hair"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        style="@style/Buttons"
         android:text="@string/nails"
-        android:id="@+id/nails"
-        android:layout_marginTop="10dp"
-        android:layout_weight="1"/>
+        android:id="@+id/nails"/>
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        style="@style/Buttons"
+
         android:text="@string/eyebrows"
-        android:id="@+id/button4"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="1dp"
-        android:layout_weight="1"/>
+        android:id="@+id/eyebrows"/>
+
+
 </LinearLayout>
 
     <LinearLayout
@@ -50,33 +40,19 @@
 
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            style="@style/Buttons"
             android:text="@string/eyelashes"
-            android:id="@+id/eyelashes"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"/>
+            android:id="@+id/eyelashes"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            style="@style/Buttons"
             android:text="@string/solarium"
-            android:id="@+id/solarium"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"
-            android:singleLine="false" />
+            android:id="@+id/solarium"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            style="@style/Buttons"
             android:text="@string/massage"
-            android:id="@+id/massage"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="1dp"
-            android:layout_weight="1"/>
+            android:id="@+id/massage"/>
     </LinearLayout>
 
     <LinearLayout
@@ -87,32 +63,19 @@
 
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            style="@style/Buttons"
             android:text="@string/SPA"
-            android:id="@+id/SPA"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"/>
+            android:id="@+id/SPA"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            style="@style/Buttons"
             android:text="@string/depilation"
-            android:id="@+id/depilation"
-            android:layout_marginTop="10dp"
-            android:layout_weight="1"/>
+            android:id="@+id/depilation"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            style="@style/Buttons"
             android:text="@string/make_up"
-            android:id="@+id/make_up"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="1dp"
-            android:layout_weight="1"/>
+            android:id="@+id/make_up"/>
     </LinearLayout>
 
     <LinearLayout
@@ -123,35 +86,19 @@
 
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            style="@style/Buttons"
             android:text="@string/injections"
-            android:id="@+id/injections"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginRight="1dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"/>
+            android:id="@+id/injections"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            style="@style/Buttons"
             android:text="@string/facial_treatments"
-            android:id="@+id/facial_treatments"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"/>
+            android:id="@+id/facial_treatments"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
+            style="@style/Buttons"
             android:text="@string/ear_piercing"
-            android:id="@+id/ear_piercing"
-            android:layout_marginRight="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="1dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"/>
+            android:id="@+id/ear_piercing"/>
     </LinearLayout>
 
 </LinearLayout>

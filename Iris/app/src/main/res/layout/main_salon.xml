@@ -18,6 +18,8 @@
             tools:layout="@layout/header_logo"
             android:id="@+id/fragment_header_logo" />
 
+
+
         <!-- Этот слой для динамческого добавления фрагмента, на данный момент
         оставим на будущее, так как пока не знаю,
          что расположить в верхнем правом углу
@@ -29,15 +31,29 @@
 
         </FrameLayout>-->
 
-
-
-
    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ff09070f" />
+
+
     <fragment android:name="ru.tentacles.iris.fragments.bodyMainSalonFragment"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         tools:layout="@layout/body_main_salon"
-        android:id="@+id/fragment_body_main" />
+        android:id="@+id/fragment_body_main"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editText" />
 
 
 </LinearLayout>
