@@ -7,7 +7,10 @@
     android:baselineAligned="false"
     android:clickable="false"
     android:focusable="false"
-    android:background="#ffffe9ba">
+    style="@style/layout_head"
+    android:id="@+id/head"
+    android:measureWithLargestChild="false">
+
 
     <ImageView
         android:layout_width="83dp"
@@ -27,17 +30,15 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-    <Button
+        <Button
         style="@style/Buttons_head"
         android:text="@string/stock"/>
 
-    <Button
+
+        <Button
         style="@style/Buttons_head"
         android:id="@+id/btnSearch"
         android:text="@string/search"/>
-
-
-
 
 
     </LinearLayout>

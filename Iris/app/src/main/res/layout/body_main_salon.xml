@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffa06f46"
+    style="@style/layout_body"
     android:clickable="false"
     android:baselineAligned="true">
 
@@ -21,7 +21,10 @@
     <Button
         style="@style/Buttons"
         android:text="@string/nails"
-        android:id="@+id/nails"/>
+        android:id="@+id/nails"
+        android:onClick="goNailsActivity"
+        android:clickable="true"
+        android:singleLine="false" />
 
     <Button
         style="@style/Buttons"

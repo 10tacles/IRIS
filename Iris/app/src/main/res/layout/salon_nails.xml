@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <fragment android:name="ru.tentacles.iris.fragments.headerLogoFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/header_logo"
+            android:id="@+id/fragment_header_logo" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#ff09070f" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false">
+
+
+    <fragment android:name="ru.tentacles.iris.fragments.nail_fragments.nailsLeftFragment"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/nails_fragm_left"
+        android:id="@+id/fragment_nails_left"
+        android:layout_weight="1"/>
+
+    <fragment
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:background="@color/right_fragment"
+        android:name="ru.tentacles.iris.fragments.nail_fragments.manicureRightFragment"
+        tools:layout="@layout/nails_fragm_right" />
+
+
+
+
+
+</LinearLayout>
+</LinearLayout>

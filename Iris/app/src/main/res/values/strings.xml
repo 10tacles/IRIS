@@ -15,6 +15,15 @@
     <string name="injections">Инъекции</string>
     <string name="facial_treatments">Уход за лицом</string>
     <string name="ear_piercing">Пирсинг</string>
+    
+    <string name="manicure">Маникюр</string>
+    <string name="pedicure">Педикюр</string>
+    <string name="nail">Покрытие ногтей</string>
+    <string name="spa_care">SPA-уход</string>
+    <string name="nail_extention">Наращивание ногтей</string>
+    <string name="select_service">Выберите услугу...</string>
+
+    <string name="service_hint">Выберите услугу...</string>
 
 
 </resources>

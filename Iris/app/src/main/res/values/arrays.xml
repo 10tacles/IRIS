@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="manicureServiceArray">
+        <item>Классический</item>
+        <item>Европейский</item>
+        <item>Аппаратный</item>
+        <item>Горячий</item>
+        <item>Японский</item>
+        <item>Мужской</item>
+    </string-array>
+</resources>

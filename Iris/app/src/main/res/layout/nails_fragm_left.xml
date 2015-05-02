@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    style="@style/layout_body"
+    android:layout_weight="1"
+    android:baselineAligned="false"
+    android:id="@+id/nails_body_left"
+    android:divider="@drawable/separator"
+    android:showDividers="middle"
+    android:dividerPadding="10dp"
+    android:focusable="false">
+
+
+    <Button
+    android:text="@string/manicure"
+    android:id="@+id/manicure"
+    style="@style/Buttons"
+        android:onClick="onClick" />
+
+    <Button
+    android:text="@string/pedicure"
+    android:id="@+id/pedicure"
+    style="@style/Buttons"/>
+
+    <Button
+    android:text="@string/nail"
+    android:id="@+id/nail"
+    style="@style/Buttons"/>
+
+    <Button
+    android:text="@string/spa_care"
+    android:id="@+id/spa_care"
+    style="@style/Buttons"/>
+
+    <Button
+    style="@style/Buttons"
+    android:text="@string/nail_extention"
+    android:id="@+id/nail_extention" />
+</LinearLayout>
