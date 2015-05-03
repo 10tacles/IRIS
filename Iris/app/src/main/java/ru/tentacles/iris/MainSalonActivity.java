@@ -19,7 +19,7 @@ public class MainSalonActivity extends FragmentActivity{
 
     //Обработчик для кнопки "Ногти" - переходим на активность с выбором услуг "Маникюр и Педикюр"
     public void goNailsActivity (View v) {
-        Intent intent = new Intent(getApplicationContext(), NailsSalonActivity.class);
+        Intent intent = new Intent(getApplicationContext(), NailSalonActivity.class);
         startActivity(intent);
     }
 }

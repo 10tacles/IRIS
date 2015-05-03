@@ -9,8 +9,7 @@
     android:id="@+id/nails_body_left"
     android:divider="@drawable/separator"
     android:showDividers="middle"
-    android:dividerPadding="10dp"
-    android:focusable="false">
+    android:focusable="true">
 
 
     <Button
@@ -29,10 +28,10 @@
     android:id="@+id/nail"
     style="@style/Buttons"/>
 
-    <Button
+    <!--<Button
     android:text="@string/spa_care"
     android:id="@+id/spa_care"
-    style="@style/Buttons"/>
+    style="@style/Buttons"/>-->
 
     <Button
     style="@style/Buttons"

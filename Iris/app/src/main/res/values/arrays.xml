@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+
     <string-array name="manicureServiceArray">
         <item>Классический</item>
         <item>Европейский</item>
@@ -7,5 +9,32 @@
         <item>Горячий</item>
         <item>Японский</item>
         <item>Мужской</item>
+        <item>SPA-маникюр</item>
     </string-array>
+    <string-array name="pedicureServiceArray">
+        <item>Классический</item>
+        <item>Европейский</item>
+        <item>Аппаратный</item>
+        <item>SPA-педикюр</item>
+        <item>Лечебный педикюр KART</item>
+    </string-array>
+    <string-array name="nailServiceArray">
+        <item>Гель-лак Shellac(руки)</item>
+        <item>Гель-лак Shellac French(руки)</item>
+        <item>Маникюр+Shellac</item>
+        <item>Маникюр+Shellac French</item>
+        <item>Гель-лак Shellac(ноги)</item>
+        <item>Гель-лак Shellac French(ноги)</item>
+        <item>Педикюр+Shellac</item>
+        <item>Педикюр+Shellac French</item>
+        <item>Снятие гель-лака</item>
+    </string-array>
+    <string-array name="extentionServiceArray">
+        <item>Стандартное</item>
+        <item>С дизайном</item>
+        <item>French</item>
+        <item>Коррекция</item>
+        <item>Снятие искусственных ногтей</item>
+    </string-array>
+
 </resources>

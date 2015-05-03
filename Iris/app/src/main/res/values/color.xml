@@ -2,5 +2,5 @@
 <resources>
     <color name="line_color">#000000</color>
     <color name="right_fragment">#ffbfae8b</color>
-
+    <color name="body_color">#ffeecb</color>
 </resources>

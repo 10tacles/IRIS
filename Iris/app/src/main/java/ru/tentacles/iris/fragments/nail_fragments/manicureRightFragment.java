@@ -1,30 +1,30 @@
 package ru.tentacles.iris.fragments.nail_fragments;
 
-import android.content.res.Resources;
+
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.widget.ArrayAdapter;
-
-import ru.tentacles.iris.NailsSalonActivity;
 import ru.tentacles.iris.R;
 
 
 public class manicureRightFragment  extends ListFragment{
 
-    public static final String TAG = "manicureRightFragment";
-    //Мы не будем создавать массивы внутри классов
-    //Все массивы располагаются в ресурсах res/values/arrays.xml
-    //В самом классе мы получаем доступ до ресурса с массивами (1*)
-    //Resources res = getResources();
-    //String[] manicureService = res.getStringArray(R.array.manicureServiceArray);
 
-    //@Override
-    //public void onActivityCreated(Bundle savedInstanceState) {
-        //super.onActivityCreated(savedInstanceState);
-        // (1*) и создаем адаптер - который будет связывать сам массив, полученный ранее,
-        //и View-элемент "Список"
-        //ArrayAdapter<String> mAdapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1, manicureService);
-        //setListAdapter(mAdapter);
+    public static final String TAG = "manicureRightFragmentTAG";
 
-    //}
+
+
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        //РњС‹ РЅРµ Р±СѓРґРµРј СЃРѕР·РґР°РІР°С‚СЊ РјР°СЃСЃРёРІС‹ РІРЅСѓС‚СЂРё РєР»Р°СЃСЃРѕРІ.
+        //Р’СЃРµ РјР°СЃСЃРёРІС‹ СЂР°СЃРїРѕР»Р°РіР°СЋС‚СЃСЏ РІ СЂРµСЃСѓСЂСЃР°С… res/values/arrays.xml
+        //Р’ СЃР°РјРѕРј РєР»Р°СЃСЃРµ РјС‹ РїРѕР»СѓС‡Р°РµРј РґРѕСЃС‚СѓРї РґРѕ СЂРµСЃСѓСЂСЃР° СЃ РјР°СЃСЃРёРІР°РјРё
+        // Рё СЃРѕР·РґР°РµРј Р°РґР°РїС‚РµСЂ - РєРѕС‚РѕСЂС‹Р№ Р±СѓРґРµС‚ СЃРІСЏР·С‹РІР°С‚СЊ СЃР°Рј РјР°СЃСЃРёРІ, РїРѕР»СѓС‡РµРЅРЅС‹Р№ СЂР°РЅРµРµ,
+        //Рё View-СЌР»РµРјРµРЅС‚ "РЎРїРёСЃРѕРє"
+        ArrayAdapter<CharSequence> mAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.manicureServiceArray, android.R.layout.simple_list_item_1);
+        setListAdapter(mAdapter);
+
+    }
 }
