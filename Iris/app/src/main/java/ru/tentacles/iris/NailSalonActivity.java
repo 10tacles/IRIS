@@ -2,14 +2,14 @@ package ru.tentacles.iris;
 
 
 
+
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
-
+import android.widget.ListView;
 import ru.tentacles.iris.fragments.NullSalonActivity;
 import ru.tentacles.iris.fragments.nail_fragments.extentionRightFragment;
 import ru.tentacles.iris.fragments.nail_fragments.manicureRightFragment;
@@ -17,7 +17,9 @@ import ru.tentacles.iris.fragments.nail_fragments.nailServRightFragment;
 import ru.tentacles.iris.fragments.nail_fragments.pedicureRightFragment;
 
 
+
 public class NailSalonActivity extends FragmentActivity implements View.OnClickListener{
+
     //Объявляем фрагменты
     private manicureRightFragment ManicureRightFragment;
     private NullSalonActivity nullSalonActivity;
@@ -37,10 +39,17 @@ public class NailSalonActivity extends FragmentActivity implements View.OnClickL
     //Button spa_care;
     Button nail_extention;
 
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.salon_nails);
+
+
+        //Блок инициализации переменных и значений
 
         manager = getSupportFragmentManager();
 
@@ -70,9 +79,6 @@ public class NailSalonActivity extends FragmentActivity implements View.OnClickL
         transaction.add(R.id.container, nullSalonActivity, NullSalonActivity.TAG);
         transaction.commit();
 
-
-
-
     }
 
     //Описываем действия, которые будут происходить
@@ -91,6 +97,7 @@ public class NailSalonActivity extends FragmentActivity implements View.OnClickL
                    // manicure.setBackgroundColor(getResources().getColor(R.color.right_fragment));
                     transaction.replace(R.id.container, ManicureRightFragment, manicureRightFragment.TAG);
                     transaction.setTransition(transaction.TRANSIT_FRAGMENT_OPEN);
+
                 } /*else {
                     manicure.setBackgroundColor(getResources().getColor(R.color.body_color));
                     transaction.replace(R.id.container, ManicureRightFragment, manicureRightFragment.TAG);
@@ -130,4 +137,6 @@ public class NailSalonActivity extends FragmentActivity implements View.OnClickL
         transaction.commit();
 
     }
+
+
 }
