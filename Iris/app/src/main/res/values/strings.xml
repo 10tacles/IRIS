@@ -24,6 +24,8 @@
     <string name="select_service">Выберите услугу...</string>
 
     <string name="service_hint">Выберите услугу...</string>
+    <string name="block_name" />
+    <string name="comm_text">0</string>
 
 
 </resources>

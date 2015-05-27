@@ -14,7 +14,7 @@
 
         <activity android:name=".NailSalonActivity"/>
         <activity android:name=".NailCostActivity"/>
-
+        <activity android:name=".NailCostFragment"/>
 
 
     </application>

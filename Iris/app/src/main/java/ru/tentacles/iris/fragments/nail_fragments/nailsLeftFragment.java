@@ -9,9 +9,7 @@ import android.widget.Button;
 
 import ru.tentacles.iris.R;
 
-//класс, который будет привязан к фрагменту nails_fragm_left
-//nails_fragm_left - это список основных услуг
-//раздела "Ногти
+
 public class nailsLeftFragment extends Fragment {
         @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

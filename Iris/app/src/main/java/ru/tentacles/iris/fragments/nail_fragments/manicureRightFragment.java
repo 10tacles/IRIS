@@ -5,15 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
-
-import ru.tentacles.iris.NailCostActivity;
+import ru.tentacles.iris.NailCostFragment;
 import ru.tentacles.iris.R;
 
-
+//Фрагмент, отражающий полный список услуг блока "Маникюр":
+//Классический -- Европейский -- Аппаратный и т.д.
 public class manicureRightFragment  extends ListFragment{
 
 
@@ -39,13 +37,14 @@ public class manicureRightFragment  extends ListFragment{
 
     }
 
-
+    //Обработчик кнопок. Нажатие на любую кнопку из списка
+    //переводит нас в активность NailCostFragment, туда же
+    //передаем позицию кнопки "position"
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        int id_position = position;
-        Intent in = new Intent(getActivity(), NailCostActivity.class);
-        in.putExtra("manicure", id_position);
+        Intent in = new Intent(getActivity(), NailCostFragment.class);
+        in.putExtra("manicure", position);
         startActivity(in);
 
     }

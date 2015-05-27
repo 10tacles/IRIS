@@ -28,7 +28,8 @@
 
         android:layout_width="136dp"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        style="@style/layout_head">
 
         <Button
         style="@style/Buttons_head"

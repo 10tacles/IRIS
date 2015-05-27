@@ -3,4 +3,20 @@
     <color name="line_color">#000000</color>
     <color name="right_fragment">#ffbfae8b</color>
     <color name="body_color">#ffeecb</color>
+
+    <!--Цвет шапки-->
+    <color name="buttons_head">#2196F3</color>
+    <color name="layout_head">#2196F3</color>
+    <!--Цвет текста в шапке-->
+    <color name="text_head">#FAFAFA</color>
+
+    <!--Цвет текста и кнопок в активности выбора цены-->
+    <color name="text_block">#0B5E9E</color>
+    <color name="buttons_block">#B3C6F9</color>
+
+    <!--Цвет тела и кнопок-->
+    <color name="layout_body">#B2EBF2</color>
+    <color name="buttons">#4083B6</color>
+
+
 </resources>

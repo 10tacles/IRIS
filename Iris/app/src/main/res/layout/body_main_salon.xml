@@ -16,7 +16,9 @@
     <Button
         style="@style/Buttons"
         android:text="@string/hair"
-        android:id="@+id/hair"/>
+        android:id="@+id/hair"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"/>
 
     <Button
         style="@style/Buttons"
@@ -24,13 +26,16 @@
         android:id="@+id/nails"
         android:onClick="goNailsActivity"
         android:clickable="true"
-        android:singleLine="false" />
+        android:singleLine="false"
+        android:layout_marginTop="15dp"/>
 
     <Button
         style="@style/Buttons"
 
         android:text="@string/eyebrows"
-        android:id="@+id/eyebrows"/>
+        android:id="@+id/eyebrows"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="20dp"/>
 
 
 </LinearLayout>
@@ -45,7 +50,8 @@
         <Button
             style="@style/Buttons"
             android:text="@string/eyelashes"
-            android:id="@+id/eyelashes"/>
+            android:id="@+id/eyelashes"
+            android:layout_marginLeft="20dp"/>
 
         <Button
             style="@style/Buttons"
@@ -55,7 +61,8 @@
         <Button
             style="@style/Buttons"
             android:text="@string/massage"
-            android:id="@+id/massage"/>
+            android:id="@+id/massage"
+            android:layout_marginRight="20dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -68,7 +75,8 @@
         <Button
             style="@style/Buttons"
             android:text="@string/SPA"
-            android:id="@+id/SPA"/>
+            android:id="@+id/SPA"
+            android:layout_marginLeft="20dp"/>
 
         <Button
             style="@style/Buttons"
@@ -78,7 +86,8 @@
         <Button
             style="@style/Buttons"
             android:text="@string/make_up"
-            android:id="@+id/make_up"/>
+            android:id="@+id/make_up"
+            android:layout_marginRight="20dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -91,17 +100,22 @@
         <Button
             style="@style/Buttons"
             android:text="@string/injections"
-            android:id="@+id/injections"/>
+            android:id="@+id/injections"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="15dp"/>
 
         <Button
             style="@style/Buttons"
             android:text="@string/facial_treatments"
-            android:id="@+id/facial_treatments"/>
+            android:id="@+id/facial_treatments"
+            android:layout_marginBottom="15dp"/>
 
         <Button
             style="@style/Buttons"
             android:text="@string/ear_piercing"
-            android:id="@+id/ear_piercing"/>
+            android:id="@+id/ear_piercing"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="15dp"/>
     </LinearLayout>
 
 </LinearLayout>

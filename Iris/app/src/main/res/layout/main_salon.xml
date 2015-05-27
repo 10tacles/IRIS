@@ -38,7 +38,7 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:background="#ff09070f" />
+        android:background="#757575" />
 
 
     <fragment android:name="ru.tentacles.iris.fragments.bodyMainSalonFragment"
@@ -48,12 +48,6 @@
         android:id="@+id/fragment_body_main"
         />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/editText" />
 
 
 </LinearLayout>
