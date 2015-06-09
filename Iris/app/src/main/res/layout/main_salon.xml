@@ -5,31 +5,19 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main_salon">
+    android:id="@+id/main_salon"
+    android:clickable="true">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <fragment android:name="ru.tentacles.iris.fragments.headerLogoFragment"
+        <fragment android:name="ru.tentacles.iris.fragments.headerLogoMainFragment"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            tools:layout="@layout/header_logo"
+            android:layout_height="120dp"
+            tools:layout="@layout/header_logo_main"
             android:id="@+id/fragment_header_logo" />
-
-
-
-        <!-- Этот слой для динамческого добавления фрагмента, на данный момент
-        оставим на будущее, так как пока не знаю,
-         что расположить в верхнем правом углу
-        <FrameLayout
-            android:id="@+id/container_login"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-        </FrameLayout>-->
 
    </LinearLayout>
 
@@ -37,16 +25,19 @@
 
     <View
         android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#757575" />
+        android:layout_height="2dp"
+        android:background="#757575"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="3"
+        android:shadowRadius="5"/>
 
 
     <fragment android:name="ru.tentacles.iris.fragments.bodyMainSalonFragment"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         tools:layout="@layout/body_main_salon"
-        android:id="@+id/fragment_body_main"
-        />
+        android:id="@+id/fragment_body_main"/>
 
 
 

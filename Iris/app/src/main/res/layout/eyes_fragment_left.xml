@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Фрагмент для 2 состояния блока "Глаза". Находится слева,
+//на нем расположены кнопки "Макияж", "Наращивание ресниц" и т.д.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    style="@style/layout_body"
+    android:layout_weight="1"
+    android:baselineAligned="false"
+    android:id="@+id/nails_body_left"
+    android:divider="@drawable/separator"
+    android:showDividers="middle"
+    android:focusable="true">
+
+
+    <Button
+        android:text="@string/makeup"
+        android:id="@+id/makeup"
+        style="@style/Buttons"
+        android:background="@drawable/button_press"/>
+
+    <Button
+        android:text="@string/eye_color"
+        android:id="@+id/eye_color"
+        style="@style/Buttons"
+        android:background="@drawable/button_press"/>
+
+    <Button
+        android:text="@string/eyebrow_shape"
+        android:id="@+id/eyebrow_shape"
+        style="@style/Buttons"
+        android:background="@drawable/button_press"/>
+
+    <Button
+        style="@style/Buttons"
+        android:text="@string/eyelash"
+        android:id="@+id/eyelash"
+        android:background="@drawable/button_press"/>
+
+    <Button
+        style="@style/Buttons"
+        android:text="@string/eye_curling"
+        android:id="@+id/eye_curling"
+        android:background="@drawable/button_press"/>
+
+    <Button
+        style="@style/Buttons"
+        android:text="@string/mascara"
+        android:id="@+id/mascara"
+        android:background="@drawable/button_press"/>
+
+    <Button
+        style="@style/Buttons"
+        android:text="@string/eye_tattoo"
+        android:id="@+id/eye_tattoo"
+        android:background="@drawable/button_press"/>
+
+    <Button
+        style="@style/Buttons"
+        android:text="@string/makeup_perm"
+        android:id="@+id/makeup_perm"
+        android:background="@drawable/button_press"/>
+
+
+</LinearLayout>

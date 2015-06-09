@@ -15,8 +15,8 @@
     <color name="buttons_block">#B3C6F9</color>
 
     <!--Цвет тела и кнопок-->
-    <color name="layout_body">#B2EBF2</color>
-    <color name="buttons">#4083B6</color>
-
+    <color name="layout_body">#4083B6</color>
+    <color name="buttons">#B2EBF2</color>
+    <!--<color name="layout_body">#4f23fc</color>-->
 
 </resources>

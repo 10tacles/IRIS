@@ -9,7 +9,8 @@ import android.widget.Button;
 
 import ru.tentacles.iris.R;
 
-
+//Фрагмент для 2 состояния блока "Ногти". Находится слева,
+//на нем расположены кнопки "Маникюр", "Наращивание ногтей" и т.д.
 public class nailsLeftFragment extends Fragment {
         @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

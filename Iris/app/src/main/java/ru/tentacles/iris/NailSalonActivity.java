@@ -3,12 +3,14 @@ package ru.tentacles.iris;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import ru.tentacles.iris.fragments.NullSalonActivity;
 import ru.tentacles.iris.fragments.nail_fragments.extentionRightFragment;
@@ -27,16 +29,17 @@ public class NailSalonActivity extends FragmentActivity implements View.OnClickL
     private nailServRightFragment NailServRightFragment;
     private extentionRightFragment ExtentionRightFragment;
 
+
     //Объявляем менеджер и транзактор фрагментов -
     //без них динамически добавлять фрагменты нельзя
     FragmentManager manager;
     FragmentTransaction transaction;
 
     //Объявляем переменные
+
     Button manicure;
     Button pedicure;
     Button nail;
-    //Button spa_care;
     Button nail_extention;
 
 
@@ -64,13 +67,11 @@ public class NailSalonActivity extends FragmentActivity implements View.OnClickL
         manicure = (Button) findViewById(R.id.manicure);
         pedicure = (Button) findViewById(R.id.pedicure);
         nail = (Button) findViewById(R.id.nail);
-        //spa_care = (Button) findViewById(R.id.spa_care);
         nail_extention = (Button) findViewById(R.id.nail_extention);
         //Привязываем обработчик кнопок
         manicure.setOnClickListener(this);
         pedicure.setOnClickListener(this);
         nail.setOnClickListener(this);
-        //spa_care.setOnClickListener(this);
         nail_extention.setOnClickListener(this);
 
         //Фрагмент с надписью "Выберите услугу" добавляется
@@ -88,21 +89,19 @@ public class NailSalonActivity extends FragmentActivity implements View.OnClickL
 
         transaction = manager.beginTransaction();
 
-        //Для каждой кнопки создана своя реализация
+        //При клике на какую-либо кнопку (Маникюр, Наращивание ресниц и т.д.)
+        //в правое поле динамически добавляется нужный фрагмент с более
+        //подробными услугами (Маникюр: классический, европейский и т.д.)
         switch (v.getId()) {
 
             case R.id.manicure:
-                //manicure.setBackgroundColor(getResources().getColor(R.color.right_fragment));
+
                 if (manager.findFragmentByTag(manicureRightFragment.TAG) == null) {
-                   // manicure.setBackgroundColor(getResources().getColor(R.color.right_fragment));
+
                     transaction.replace(R.id.container, ManicureRightFragment, manicureRightFragment.TAG);
                     transaction.setTransition(transaction.TRANSIT_FRAGMENT_OPEN);
 
-                } /*else {
-                    manicure.setBackgroundColor(getResources().getColor(R.color.body_color));
-                    transaction.replace(R.id.container, ManicureRightFragment, manicureRightFragment.TAG);
-                    transaction.setTransition(transaction.TRANSIT_FRAGMENT_FADE);
-                } */
+                }
                 break;
 
             case R.id.pedicure:
@@ -138,5 +137,18 @@ public class NailSalonActivity extends FragmentActivity implements View.OnClickL
 
     }
 
+    //Обработчик для кнопки в виде домика в шапке приложения. Возвращает пользователя
+    //в главную активность
+    public void goHome(View v) {
+        Intent intent = new Intent(getApplicationContext(), MainSalonActivity.class);
+        startActivity(intent);
+    }
+
+    //Обработчик для кнопки в виде стрелки в шапке приложения. Возвращает пользователя
+    //в предыдущую активность
+    public void goBack(View v) {
+        Intent intent = new Intent(getApplicationContext(), MainSalonActivity.class);
+        finish();
+    }
 
 }

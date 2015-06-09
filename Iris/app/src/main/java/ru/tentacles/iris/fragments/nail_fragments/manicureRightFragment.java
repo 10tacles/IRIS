@@ -7,7 +7,6 @@ import android.support.v4.app.ListFragment;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import ru.tentacles.iris.NailCostFragment;
 import ru.tentacles.iris.R;
 
 //Фрагмент, отражающий полный список услуг блока "Маникюр":
@@ -16,8 +15,6 @@ public class manicureRightFragment  extends ListFragment{
 
 
     public static final String TAG = "manicureRightFragmentTAG";
-
-
 
 
     @Override
@@ -43,7 +40,7 @@ public class manicureRightFragment  extends ListFragment{
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         super.onListItemClick(l, v, position, id);
-        Intent in = new Intent(getActivity(), NailCostFragment.class);
+        Intent in = new Intent(getActivity(), ManicureCostFragment.class);
         in.putExtra("manicure", position);
         startActivity(in);
 

@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.Base.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.CompactMenu">
         <!-- Customize your theme here. -->
     </style>
 
@@ -12,7 +12,8 @@
         <item name="android:background">@color/buttons</item>
         <item name="android:gravity">center</item>
         <item name="android:typeface">serif</item>
-        <item name="android:textColor">@color/text_head</item>
+        <item name="android:textColor">@color/text_block</item>
+        <item name="android:layout_margin">0.5dp</item>
     </style>
 
     <style name="Buttons_block">
@@ -21,8 +22,9 @@
         <item name="android:layout_weight">1</item>
         <item name="android:background">@color/buttons_block</item>
         <item name="android:gravity">center</item>
-        <item name="android:typeface">serif</item>
+        <item name="android:typeface">normal</item>
         <item name="android:textColor">@color/text_block</item>
+
 
     </style>
 
@@ -41,7 +43,19 @@
 
     <style name="layout_body">
     <item name="android:background">@color/layout_body</item>
+
+
     </style>
+
+    <!--Стиль: список салонов + цены + рейтинг-->
+    <style name="layout_block">
+    <item name="android:background">@color/buttons</item>
+
+
+
+    </style>
+
+
     <style name="layout_body_right">
         <item name="android:background">@color/layout_body</item>
     </style>

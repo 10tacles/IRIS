@@ -22,19 +22,20 @@
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:background="#ff09070f" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="fill_parent"
-    android:orientation="horizontal"
-    android:baselineAligned="false">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
 
 
-    <fragment android:name="ru.tentacles.iris.fragments.nail_fragments.nailsLeftFragment"
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        tools:layout="@layout/nails_fragm_left"
-        android:id="@+id/fragment_nails_left"
-        android:layout_weight="1"/>
+        <fragment android:name="ru.tentacles.iris.fragments.nail_fragments.nailsLeftFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/nails_fragm_left"
+            android:id="@+id/fragment_nails_left"
+            android:layout_weight="1"/>
 
   <LinearLayout
         android:id="@+id/container"
@@ -43,17 +44,9 @@
         android:orientation="vertical"
         android:layout_weight="1"
         android:gravity="center"
-        android:background="@color/right_fragment"
+        android:background="@color/buttons_block"
         tools:layout="@layout/nails_fragm_right">
     </LinearLayout>
+    </LinearLayout>
 
-    <!--<fragment
-        android:name="ru.tentacles.iris.fragments.nail_fragments.manicureRightFragment"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1"/> -->
-
-
-
-</LinearLayout>
 </LinearLayout>

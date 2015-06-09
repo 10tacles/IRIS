@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--Фрагмент для 2 состояния блока "Ногти". Находится слева,
+//на нем расположены кнопки "Маникюр", "Наращивание ногтей" и т.д.-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="wrap_content"
@@ -13,28 +15,27 @@
 
 
     <Button
-    android:text="@string/manicure"
-    android:id="@+id/manicure"
-    style="@style/Buttons"
-        android:onClick="onClick" />
+        android:text="@string/manicure"
+        android:id="@+id/manicure"
+        style="@style/Buttons"
+        android:onClick="onClick"
+        android:background="@drawable/button_press" />
 
     <Button
-    android:text="@string/pedicure"
-    android:id="@+id/pedicure"
-    style="@style/Buttons"/>
+        android:text="@string/pedicure"
+        android:id="@+id/pedicure"
+        style="@style/Buttons"
+        android:background="@drawable/button_press" />
 
     <Button
-    android:text="@string/nail"
-    android:id="@+id/nail"
-    style="@style/Buttons"/>
-
-    <!--<Button
-    android:text="@string/spa_care"
-    android:id="@+id/spa_care"
-    style="@style/Buttons"/>-->
+        android:text="@string/nail"
+        android:id="@+id/nail"
+        style="@style/Buttons"
+        android:background="@drawable/button_press" />
 
     <Button
-    style="@style/Buttons"
-    android:text="@string/nail_extention"
-    android:id="@+id/nail_extention" />
+        style="@style/Buttons"
+        android:text="@string/nail_extention"
+        android:id="@+id/nail_extention"
+        android:background="@drawable/button_press" />
 </LinearLayout>

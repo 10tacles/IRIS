@@ -8,10 +8,7 @@ import android.view.ViewGroup;
 
 import ru.tentacles.iris.R;
 
-/** Этот фрагмент будем использовать во всех активностях,
- * состоящих из двух полей.
- * Фрагмент будет стоять справа, если ни одна услуга не выбрана
- */
+
 
 public class NullSalonActivity extends Fragment {
 

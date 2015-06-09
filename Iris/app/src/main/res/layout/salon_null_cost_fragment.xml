@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/buttons_block">
+
+   <!-- <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"> -->
+
+        <!--Фрагмент тулбара-шапки-->
+        <!--<fragment android:name="ru.tentacles.iris.fragments.headerLogoFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            tools:layout="@layout/header_logo"
+            android:id="@+id/fragment_header_logo" />
+    </LinearLayout> -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/textView"
+        style="@style/Buttons_block"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/empty" />
+
+
+</LinearLayout>

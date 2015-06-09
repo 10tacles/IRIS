@@ -5,7 +5,7 @@
     <string name="stock">Акции</string>
     <string name="hair">Волосы</string>
     <string name="nails">Ногти</string>
-    <string name="eyebrows">Брови</string>
+    <string name="eyebrows">Глаза</string>
     <string name="eyelashes">Ресницы</string>
     <string name="solarium">Солярий</string>
     <string name="massage">Массаж</string>
@@ -15,17 +15,41 @@
     <string name="injections">Инъекции</string>
     <string name="facial_treatments">Уход за лицом</string>
     <string name="ear_piercing">Пирсинг</string>
-    
+
+    <!--Блок ногти-->
     <string name="manicure">Маникюр</string>
     <string name="pedicure">Педикюр</string>
     <string name="nail">Покрытие ногтей</string>
     <string name="spa_care">SPA-уход</string>
     <string name="nail_extention">Наращивание ногтей</string>
     <string name="select_service">Выберите услугу...</string>
+    <!--Блок глаза-->
+    <string name="makeup">Макияж</string>
+    <string name="eye_color">Окрашивание</string>
+    <string name="eyebrow_shape">Оформление бровей</string>
+    <string name="eyelash">Наращивание ресниц</string>
+    <string name="eye_curling">Завивка ресниц</string>
+    <string name="mascara">Полуперманентная тушь</string>
+    <string name="eye_tattoo">Татуаж</string>
+    <string name="makeup_perm">Перманентный макияж</string>
+
+
+
+
+
 
     <string name="service_hint">Выберите услугу...</string>
-    <string name="block_name" />
+    <string name="block_name" >Название услуги..</string>
     <string name="comm_text">0</string>
+    <string name="rare_letter">Рейтинг:</string>
+    <string name="rate_show">/10</string>
+    <string name="cost_show">Цена:</string>
+    <string name="salon_comm">256</string>
+    <string name="add_favor">add_favor</string>
+    <string name="salon_info">salon_info</string>
+    <string name="iris_name">IRIS</string>
+    <string name="empty">Пока что нет салонов, предоставляющих данную услугу...</string>
+    <string name="phone_number" />
 
 
 </resources>

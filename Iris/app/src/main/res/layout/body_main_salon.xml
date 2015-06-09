@@ -4,7 +4,8 @@
     android:layout_height="match_parent"
     style="@style/layout_body"
     android:clickable="false"
-    android:baselineAligned="true">
+    android:baselineAligned="true"
+    android:layout_margin="10dp">
 
 
     <LinearLayout
@@ -18,7 +19,8 @@
         android:text="@string/hair"
         android:id="@+id/hair"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_press" />
 
     <Button
         style="@style/Buttons"
@@ -27,7 +29,8 @@
         android:onClick="goNailsActivity"
         android:clickable="true"
         android:singleLine="false"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp"
+        android:background="@drawable/button_press" />
 
     <Button
         style="@style/Buttons"
@@ -35,7 +38,10 @@
         android:text="@string/eyebrows"
         android:id="@+id/eyebrows"
         android:layout_marginTop="15dp"
-        android:layout_marginRight="20dp"/>
+        android:layout_marginRight="20dp"
+        android:background="@drawable/button_press"
+        android:clickable="true"
+        android:onClick="goEyesActivity" />
 
 
 </LinearLayout>
@@ -51,18 +57,22 @@
             style="@style/Buttons"
             android:text="@string/eyelashes"
             android:id="@+id/eyelashes"
-            android:layout_marginLeft="20dp"/>
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/button_press"
+            android:clickable="true" />
 
         <Button
             style="@style/Buttons"
             android:text="@string/solarium"
-            android:id="@+id/solarium"/>
+            android:id="@+id/solarium"
+            android:background="@drawable/button_press" />
 
         <Button
             style="@style/Buttons"
             android:text="@string/massage"
             android:id="@+id/massage"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:background="@drawable/button_press" />
     </LinearLayout>
 
     <LinearLayout
@@ -87,7 +97,8 @@
             style="@style/Buttons"
             android:text="@string/make_up"
             android:id="@+id/make_up"
-            android:layout_marginRight="20dp"/>
+            android:layout_marginRight="20dp"
+            android:clickable="true" />
     </LinearLayout>
 
     <LinearLayout

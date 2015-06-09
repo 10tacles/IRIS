@@ -3,18 +3,56 @@
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
-        android:icon="@drawable/logoeyevoltwo"
-        android:theme="@style/AppTheme">
-    <activity android:name=".MainSalonActivity">
+        android:icon="@drawable/logo_main"
+        android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+
+        <!--Регистрация главной активности в манифесте.
+        На все активности выставлен запрет на поворот экрана-->
+        <activity android:name=".MainSalonActivity"
+        android:screenOrientation="portrait">
         <intent-filter>
             <action android:name="android.intent.action.MAIN"/>
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
     </activity>
 
-        <activity android:name=".NailSalonActivity"/>
-        <activity android:name=".NailCostActivity"/>
-        <activity android:name=".NailCostFragment"/>
+        <!--Регистрируем активности блока "Ногти" в манифесте-->
+        <activity android:name=".NailSalonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.nail_fragments.PedicureCostFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.nail_fragments.ShellacCostFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.nail_fragments.ExtentionCostFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.nail_fragments.ManicureCostFragment"
+            android:screenOrientation="portrait"/>
+
+        <!--Регистрируем "пустую активность в манифесте,
+        появляется, если салоны по какой-либо услуге не найдены-->
+        <activity android:name=".fragments.NullCostActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Holo.Dialog"/>
+
+        <!--Регистрируем активности блока "Глаза" в манифесте-->
+        <activity android:name=".EyeSalonActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.eye_fragment.EyebrowCostFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.eye_fragment.MakeupCostFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.eye_fragment.EyeColorCostFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.eye_fragment.EyelashCostFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.eye_fragment.EyeCurlingCostFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.eye_fragment.MascaraCostFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.eye_fragment.EyeTattooCostFragment"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".fragments.eye_fragment.MakeupPermCostFragment"
+            android:screenOrientation="portrait"/>
 
 
     </application>
@@ -25,4 +63,6 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="ANDROID.PERMISSION.CALL_PHONE" />
+
 </manifest>

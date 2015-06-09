@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#BFAE8B"
+    android:background="@color/buttons_block"
     android:gravity="bottom|center">
 
     <TextView
@@ -15,7 +15,7 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:hint="@string/select_service"
-        android:textColor="#7F745D"
+        android:textColor="@color/text_block"
         android:typeface="serif"
         android:textSize="18dp"/>
 </RelativeLayout>

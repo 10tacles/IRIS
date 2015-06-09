@@ -3,51 +3,94 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
     android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="120dp"
     android:baselineAligned="false"
     android:clickable="false"
     android:focusable="false"
     style="@style/layout_head"
     android:id="@+id/head"
     android:measureWithLargestChild="false">
-
-
-    <ImageView
-        android:layout_width="83dp"
-        android:layout_height="83dp"
-        android:id="@+id/logoEYE"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/logoeye"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="15dp"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="9dp"
-        android:layout_marginRight="9dp"/>
+    
 
     <LinearLayout
-
-        android:layout_width="136dp"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:orientation="vertical"
-        style="@style/layout_head">
+        android:layout_weight="1.1">
 
-        <Button
-        style="@style/Buttons_head"
-        android:text="@string/stock"/>
+        <ImageView
+            style="@style/Buttons_head"/>
 
+        <ImageButton
+            style="@style/Buttons_head"
+            android:src="@mipmap/ic_home_white_48dp"
+            android:layout_gravity="center_horizontal"
 
-        <Button
-        style="@style/Buttons_head"
-        android:id="@+id/btnSearch"
-        android:text="@string/search"/>
+            android:clickable="true"
+            android:id="@+id/go_home"
+            android:onClick="goHome" />
+        <ImageButton
+            style="@style/Buttons_head"
+
+            android:src="@mipmap/ic_reply"
+            android:onClick="goBack" />
 
 
     </LinearLayout>
 
-    <Button
-        style="@style/Buttons_head"
-        android:text="Избранное"
-        android:id="@+id/button5"
-        />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:layout_weight="0.4">
+
+        <ImageView
+            style="@style/Buttons_head"
+            android:src="@mipmap/logo_clear"
+            android:layout_weight="1.6"/>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            style="@style/Buttons_head"
+            android:text="@string/iris_name"
+            android:textStyle="bold"
+            android:textSize="50sp"
+            android:typeface="normal"
+            android:linksClickable="false"
+            android:gravity="center_vertical"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="3"
+            android:shadowRadius="5" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_weight="1.1">
+
+        <ImageButton
+            style="@style/Buttons_head"
+            android:src="@mipmap/ic_settings_black_36dp" />
+
+        <ImageButton
+            style="@style/Buttons_head"
+            android:src="@mipmap/ic_search_white_48dp" />
+
+        <ImageButton
+            style="@style/Buttons_head"
+            android:src="@mipmap/ic_favorite_red_36dp"
+            android:cropToPadding="false"
+            android:baselineAlignBottom="false"
+            android:shadowColor="#000000"
+            android:shadowDx="5"
+            android:shadowDy="3"
+            android:shadowRadius="5"/>
+
+    </LinearLayout>
+
 
 </LinearLayout>

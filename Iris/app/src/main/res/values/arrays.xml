@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
+    <!--Блок "Ногти"-->
+    <!--Подблок "Ногти" - Маникюр-->
     <string-array name="manicureServiceArray">
         <item>Классический</item>
         <item>Европейский</item>
@@ -11,6 +12,7 @@
         <item>Мужской</item>
         <item>SPA-маникюр</item>
     </string-array>
+    <!--Подблок "Ногти" - Педикюр-->
     <string-array name="pedicureServiceArray">
         <item>Классический</item>
         <item>Европейский</item>
@@ -18,6 +20,7 @@
         <item>SPA-педикюр</item>
         <item>Лечебный педикюр KART</item>
     </string-array>
+    <!--Подблок "Ногти" - Покрытие гель-лаком-->
     <string-array name="nailServiceArray">
         <item>Гель-лак Shellac(руки)</item>
         <item>Гель-лак Shellac French(руки)</item>
@@ -29,12 +32,71 @@
         <item>Педикюр+Shellac French</item>
         <item>Снятие гель-лака</item>
     </string-array>
+    <!--Подблок "Ногти" - Наращивание ногтей-->
     <string-array name="extentionServiceArray">
         <item>Стандартное</item>
         <item>С дизайном</item>
         <item>French</item>
         <item>Коррекция</item>
         <item>Снятие искусственных ногтей</item>
+    </string-array>
+
+    <!--Блок "Глаза"-->
+    <!--Подблок "Глаза" - Макияж-->
+    <string-array name="makeupArray">
+        <item>Дневной</item>
+        <item>Вечерний</item>
+        <item>Свадебный</item>
+        <item>Выезд на дом</item>
+        <item>Удаление макияжа</item>
+    </string-array>
+    <!--Подблок "Ногти" - Окрашивание-->
+    <string-array name="eye_colorArray">
+        <item>Бровей</item>
+        <item>Ресниц</item>
+    </string-array>
+
+
+    <!--Подблок "Глаза" - Оформление бровей-->
+    <string-array name="eyebrow_shapeArray">
+        <item>Моделирование</item>
+        <item>Коррекция</item>
+    </string-array>
+    <!--Подблок "Глаза" - Наращивание ресниц-->
+    <string-array name="eyelashArray">
+        <item>Поресничное</item>
+        <item>Коррекция поресничного наращивания </item>
+        <item>Пучковое</item>
+        <item>Коррекция пучкового наращивания</item>
+        <item>Декор</item>
+        <item>Снятие ресниц</item>
+    </string-array>
+    <!--Подблок "Глаза" - Наращивание ресниц-->
+    <string-array name="eye_curlingArray">
+        <item>Химическая</item>
+        <item>Биозавивка</item>
+    </string-array>
+   <!--Подблок "Глаза" - Полуперманентная тушь-->
+    <string-array name="mascaraArray">
+        <item>Верхние ресницы</item>
+        <item>Нижние ресницы</item>
+        <item>Брови</item>
+    </string-array>
+    <!--Подблок "Глаза" - Татуаж-->
+    <string-array name="eye_tattooArray">
+        <item>Бровей</item>
+        <item>Век</item>
+        <item>Межресничное пространство</item>
+        <item>Стрелка с растушевкой</item>
+    </string-array>
+    <!--Подблок "Глаза" - Перманентный макияж-->
+    <string-array name="makeup_permArray">
+        <item>Бровей</item>
+        <item>Коррекция бровей</item>
+        <item>Век</item>
+        <item>Коррекция век</item>
+        <item>Ресничный контур</item>
+        <item>Коррекция ресничного контура</item>
     </string-array>
 
 </resources>

@@ -36,11 +36,13 @@
 
     <fragment android:name="ru.tentacles.iris.fragments.CostSalonsFragment"
 
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-        tools:layout="@layout/list_item"
-        android:id="@+id/CostSalonsFragment">
+
+
+            tools:layout="@layout/list_item"
+            android:id="@+id/CostSalonsFragment">
 
 
     </fragment>
