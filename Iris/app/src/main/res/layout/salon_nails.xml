@@ -5,29 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <fragment android:name="ru.tentacles.iris.fragments.headerLogoFragment"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        tools:layout="@layout/header_logo"
+        android:id="@+id/fragment_header_logo"/>
 
-        <fragment android:name="ru.tentacles.iris.fragments.headerLogoFragment"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            tools:layout="@layout/header_logo"
-            android:id="@+id/fragment_header_logo" />
+   <TextView
+       style="@style/txt_subtitle"
+       android:text="@string/nails"
+       android:id="@+id/subtitle_nails" />
 
-    </LinearLayout>
-
-    <View
+    <!--<View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:background="#ff09070f" />
+        android:background="#ff09070f" /> -->
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:orientation="horizontal"
-        android:baselineAligned="false">
+        android:baselineAligned="false"
+        android:divider="@drawable/cuteline"
+        android:showDividers="none">
 
 
         <fragment android:name="ru.tentacles.iris.fragments.nail_fragments.nailsLeftFragment"
@@ -37,16 +38,24 @@
             android:id="@+id/fragment_nails_left"
             android:layout_weight="1"/>
 
-  <LinearLayout
-        android:id="@+id/container"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:background="@color/buttons_block"
-        tools:layout="@layout/nails_fragm_right">
+        <LinearLayout
+            android:id="@+id/container"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@color/layout_secondary"
+            tools:layout="@layout/nails_fragm_right"
+            android:divider="@drawable/cuteline"
+            android:showDividers="middle|beginning|end">
+        </LinearLayout>
     </LinearLayout>
+
+    <LinearLayout
+        style="@style/layout_advert"
+        android:layout_height="72dp">
+
     </LinearLayout>
 
 </LinearLayout>

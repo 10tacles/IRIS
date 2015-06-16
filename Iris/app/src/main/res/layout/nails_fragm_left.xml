@@ -10,32 +10,34 @@
     android:baselineAligned="false"
     android:id="@+id/nails_body_left"
     android:divider="@drawable/separator"
-    android:showDividers="middle"
+    android:showDividers="middle|end"
     android:focusable="true">
 
 
     <Button
         android:text="@string/manicure"
         android:id="@+id/manicure"
-        style="@style/Buttons"
+        style="@style/ButtonsSecond"
         android:onClick="onClick"
-        android:background="@drawable/button_press" />
+        android:background="@drawable/button_press"/>
 
     <Button
         android:text="@string/pedicure"
         android:id="@+id/pedicure"
-        style="@style/Buttons"
+        style="@style/ButtonsSecond"
         android:background="@drawable/button_press" />
 
     <Button
         android:text="@string/nail"
         android:id="@+id/nail"
-        style="@style/Buttons"
+        style="@style/ButtonsSecond"
         android:background="@drawable/button_press" />
 
     <Button
-        style="@style/Buttons"
+        style="@style/ButtonsSecond"
         android:text="@string/nail_extention"
         android:id="@+id/nail_extention"
         android:background="@drawable/button_press" />
+
+
 </LinearLayout>

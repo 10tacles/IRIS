@@ -15,8 +15,19 @@
     <color name="buttons_block">#B3C6F9</color>
 
     <!--Цвет тела и кнопок-->
-    <color name="layout_body">#4083B6</color>
+   <!-- <color name="layout_body">#4083B6</color> -->
+
     <color name="buttons">#B2EBF2</color>
     <!--<color name="layout_body">#4f23fc</color>-->
+
+
+    <!--Цвет текста и кнопок 2-е состояние, подблоки-->
+    <color name="text_primary">#DE000000</color>
+    <color name="text_secondary">#8A000000</color>
+    <color name="text_color">#757575</color>
+    <color name="buttons_second">#FAFAFA</color>
+    <color name="buttons_pressed">#EEEEEE</color>
+    <color name="layout_secondary">#E0E0E0</color>
+    <color name="layout_body">#FAFAFA</color>
 
 </resources>

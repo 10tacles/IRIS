@@ -1,19 +1,51 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.CompactMenu">
-        <!-- Customize your theme here. -->
+    <!-- Основная тема приложения -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+
     </style>
 
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/buttons_second</item>
+    </style>
+
+<!--Кнопки первого состояния, мейнактивити-->
     <style name="Buttons">
-        <item name="android:layout_height">fill_parent</item>
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/buttons</item>
+        <item name="android:layout_height">80dp</item>
+        <item name="android:layout_width">80dp</item>
+        <item name="android:background">@drawable/button_press</item>
         <item name="android:gravity">center</item>
         <item name="android:typeface">serif</item>
+        <item name="android:textSize">15sp</item>
         <item name="android:textColor">@color/text_block</item>
-        <item name="android:layout_margin">0.5dp</item>
+    </style>
+
+    <!--Кнопки второго состояния приложения-->
+    <style name="ButtonsSecond">
+        <item name="android:layout_height">72dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/rectangle</item>
+        <item name="android:color">@color/buttons_second</item>
+        <item name="android:titleTextStyle">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textSize">14sp</item>
+
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:layout_gravity">center_vertical|center_horizontal</item>
+        <item name="android:gravity">fill_vertical</item>
+
+    </style>
+
+    <!--Текстовое поле подзаголовков второго состояния-->
+    <style name="txt_subtitle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:titleTextStyle">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:gravity">fill_vertical</item>
     </style>
 
     <style name="Buttons_block">
@@ -24,11 +56,28 @@
         <item name="android:gravity">center</item>
         <item name="android:typeface">normal</item>
         <item name="android:textColor">@color/text_block</item>
-
-
     </style>
 
-    <style name="Buttons_head">
+    <!--Основной фон + фон фрагмента справа во втором состоянии-->
+    <style name="layout_body">
+        <item name="android:background">@color/layout_body</item>
+    </style>
+    <!--<style name="layout_body_right">
+        <item name="android:background">@color/layout_body</item>
+    </style>-->
+
+    <!--Стиль: список салонов + цены + рейтинг-->
+    <style name="layout_block">
+        <item name="android:background">@color/buttons</item>
+    </style>
+
+    <!--Для рекламы-->
+    <style name="layout_advert">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">70dp</item>
+    </style>
+
+    <!--<style name="Buttons_head">
         <item name="android:layout_height">fill_parent</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_weight">1</item>
@@ -37,27 +86,7 @@
         <item name="android:typeface">serif</item>
     </style>
 
-   <style name="layout_head">
+    <style name="layout_head">
        <item name="android:background">@color/layout_head</item>
-   </style>
-
-    <style name="layout_body">
-    <item name="android:background">@color/layout_body</item>
-
-
-    </style>
-
-    <!--Стиль: список салонов + цены + рейтинг-->
-    <style name="layout_block">
-    <item name="android:background">@color/buttons</item>
-
-
-
-    </style>
-
-
-    <style name="layout_body_right">
-        <item name="android:background">@color/layout_body</item>
-    </style>
-
+   </style>-->
 </resources>

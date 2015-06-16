@@ -98,7 +98,7 @@
                 android:textSize="0sp"
                 android:onClick="takeCall"
                 android:clickable="true"
-                android:background="@drawable/ic_settings_phone_grey600_48dp" />
+                android:background="@mipmap/ic_phone_in_talk" />
         </LinearLayout>
 
     </LinearLayout>

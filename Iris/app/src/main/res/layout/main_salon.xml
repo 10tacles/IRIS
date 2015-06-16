@@ -2,35 +2,35 @@
     <!-- Главная разметка. Состоит из фрагментов-частей -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/main_salon"
-    android:clickable="true">
+    android:clickable="true"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <fragment android:name="ru.tentacles.iris.fragments.headerLogoMainFragment"
+        <fragment android:name="ru.tentacles.iris.fragments.headerLogoFragment"
             android:layout_width="fill_parent"
-            android:layout_height="120dp"
-            tools:layout="@layout/header_logo_main"
+            android:layout_height="match_parent"
+            tools:layout="@layout/header_logo"
             android:id="@+id/fragment_header_logo" />
 
    </LinearLayout>
 
 
 
-    <View
+    <!--<View
         android:layout_width="fill_parent"
         android:layout_height="2dp"
         android:background="#757575"
         android:shadowColor="#000000"
         android:shadowDx="5"
         android:shadowDy="3"
-        android:shadowRadius="5"/>
+        android:shadowRadius="5"/>-->
 
 
     <fragment android:name="ru.tentacles.iris.fragments.bodyMainSalonFragment"

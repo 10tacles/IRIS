@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/buttons_block"
+    android:background="@color/layout_secondary"
+
     android:gravity="bottom|center">
 
     <TextView
@@ -12,10 +13,11 @@
         android:text="@string/select_service"
         android:id="@+id/select_service"
         android:layout_gravity="center"
+        android:hint="@string/select_service"
+        android:textColor="@color/text_primary"
+        android:typeface="serif"
+        android:textSize="18dp"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:hint="@string/select_service"
-        android:textColor="@color/text_block"
-        android:typeface="serif"
-        android:textSize="18dp"/>
+        android:gravity="center_vertical|center_horizontal" />
 </RelativeLayout>
