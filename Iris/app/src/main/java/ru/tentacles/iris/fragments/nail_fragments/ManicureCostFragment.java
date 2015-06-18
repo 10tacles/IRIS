@@ -1,42 +1,34 @@
 package ru.tentacles.iris.fragments.nail_fragments;
 
 
-import android.app.Activity;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
-
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import ru.tentacles.iris.BodyFaceSalonActivity;
 import ru.tentacles.iris.EpilationSalonActivity;
 import ru.tentacles.iris.EyeSalonActivity;
@@ -53,6 +45,7 @@ public class ManicureCostFragment extends ActionBarActivity{
 
     //Блок объявления значений и переменных.
     TextView block_name;
+
     //Визуальное отображение задачи async task
     //для пользователя
     private ProgressDialog pDialog;
@@ -231,7 +224,6 @@ public class ManicureCostFragment extends ActionBarActivity{
             // отправляем измененные данные через http запрос
             jsonParser.makeHttpRequest(update_salon, "POST", params);
 
-
             return null;
         }
 
@@ -240,7 +232,6 @@ public class ManicureCostFragment extends ActionBarActivity{
     //Фоновая задача для получения нужного списка салонов из
     //базы данных MySQL
     class LoadCost extends AsyncTask<String, String, String> {
-
 
         @Override
         protected void onPreExecute() {
@@ -299,7 +290,6 @@ public class ManicureCostFragment extends ActionBarActivity{
 
                         //Добавляем HashList в ArrayList
                         mClassicList.add(map);
-
                     }
                 } else {
                     //Если салоны по какой-либо услуге
@@ -345,11 +335,9 @@ public class ManicureCostFragment extends ActionBarActivity{
 
     public void takeCall(View v){
         String num;
-
-        //TextView txt = (TextView)findViewById(R.id.salon_phone);
         TextView txt = ((TextView)v);
-
         num = txt.getText().toString();
+
         Intent call = new Intent(Intent.ACTION_DIAL);
         call.setData(Uri.parse("tel:" + num));
         startActivity(call);

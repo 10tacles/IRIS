@@ -12,7 +12,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
-
+        <!--Подключаем статический фрагмент шапки-->
         <fragment android:name="ru.tentacles.iris.fragments.headerLogoFragment"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
@@ -20,25 +20,11 @@
             android:id="@+id/fragment_header_logo" />
 
    </LinearLayout>
-
-
-
-    <!--<View
-        android:layout_width="fill_parent"
-        android:layout_height="2dp"
-        android:background="#757575"
-        android:shadowColor="#000000"
-        android:shadowDx="5"
-        android:shadowDy="3"
-        android:shadowRadius="5"/>-->
-
-
+    <!--Подключаем статический фрагмент тела приложения-->
     <fragment android:name="ru.tentacles.iris.fragments.bodyMainSalonFragment"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         tools:layout="@layout/body_main_salon"
         android:id="@+id/fragment_body_main"/>
-
-
 
 </LinearLayout>

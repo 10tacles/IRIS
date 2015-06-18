@@ -5,8 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-
 import ru.tentacles.iris.R;
 
 //класс, который будет привязан к фрагментуbody_main_salon

@@ -4,38 +4,25 @@
     <string name="search">Поиск</string>
     <string name="stock">Акции</string>
 
+    <!--Строковые значения для Navigation drawer-->
     <string name="action_settings">Настройки</string>
-
     <string name="drawer_item_home">Домой</string>
-
     <string name="drawer_item_hair">Волосы</string>
     <string name="drawer_item_nails">Ногти</string>
     <string name="drawer_item_eyebrows">Глаза</string>
     <string name="drawer_item_bodyface">Лицо и Тело</string>
     <string name="drawer_item_epilation">Эпиляция</string>
     <string name="drawer_item_men">Мужское</string>
-
     <string name="drawer_item_settings">Настройки</string>
     <string name="drawer_item_contact">Обратная связь</string>
 
-
+    <!--Разделы первого состояния-->
     <string name="hair">Волосы</string>
     <string name="nails">Ногти</string>
     <string name="eyebrows">Глаза</string>
     <string name="bodyface">Лицо и Тело</string>
     <string name="epilation">Эпиляция</string>
     <string name="men">Мужское</string>
-
-
-   <!-- <string name="eyelashes">Ресницы</string>
-    <string name="solarium">Солярий</string>
-    <string name="massage">Массаж</string>
-    <string name="SPA">SPA</string>
-    <string name="depilation">Депиляция</string>
-    <string name="make_up">Визаж</string>
-    <string name="injections">Инъекции</string>
-    <string name="facial_treatments">Уход за лицом</string>
-    <string name="ear_piercing">Пирсинг</string> -->
 
     <!--Блок ногти-->
     <string name="manicure">Маникюр</string>
@@ -45,6 +32,7 @@
     <string name="nail_extention">Наращивание ногтей</string>
     <string name="select_service">Выберите услугу...</string>
     <string name="select_serviceOne">Выберите раздел...</string>
+
     <!--Блок глаза-->
     <string name="makeup">Макияж</string>
     <string name="eye_color">Окрашивание</string>
@@ -55,11 +43,7 @@
     <string name="eye_tattoo">Татуаж</string>
     <string name="makeup_perm">Перманентный макияж</string>
 
-
-
-
-
-
+    <!--Для третьего состояния-->
     <string name="service_hint">Выберите услугу...</string>
     <string name="block_name" >Название услуги..</string>
     <string name="comm_text">0</string>

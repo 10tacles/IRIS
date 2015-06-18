@@ -5,7 +5,7 @@
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
 
     </style>
-
+    <!--Переназначение цвета для иконки Navigation Drawer-->
     <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@color/buttons_second</item>
@@ -47,24 +47,22 @@
         <item name="android:paddingLeft">16dp</item>
         <item name="android:gravity">fill_vertical</item>
     </style>
-
+    <!--Текстовое поле подзаголовков третьего состояния-->
     <style name="Buttons_block">
         <item name="android:layout_height">fill_parent</item>
         <item name="android:layout_width">fill_parent</item>
         <item name="android:layout_weight">1</item>
-        <item name="android:background">@color/buttons_block</item>
+        <item name="android:background">@color/layout_secondary</item>
         <item name="android:gravity">center</item>
         <item name="android:typeface">normal</item>
-        <item name="android:textColor">@color/text_block</item>
+        <item name="android:textColor">@color/text_color</item>
     </style>
 
     <!--Основной фон + фон фрагмента справа во втором состоянии-->
     <style name="layout_body">
         <item name="android:background">@color/layout_body</item>
     </style>
-    <!--<style name="layout_body_right">
-        <item name="android:background">@color/layout_body</item>
-    </style>-->
+
 
     <!--Стиль: список салонов + цены + рейтинг-->
     <style name="layout_block">
@@ -89,4 +87,7 @@
     <style name="layout_head">
        <item name="android:background">@color/layout_head</item>
    </style>-->
+    <!--<style name="layout_body_right">
+        <item name="android:background">@color/layout_body</item>
+    </style>-->
 </resources>

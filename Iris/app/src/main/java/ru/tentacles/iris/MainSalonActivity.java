@@ -2,15 +2,11 @@ package ru.tentacles.iris;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
 import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.view.Gravity;
 import com.mikepenz.materialdrawer.model.interfaces.Badgeable;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Toast;
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
@@ -18,8 +14,6 @@ import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
-import org.apache.http.Header;
-import org.json.JSONException;
 
 
 //Главная активность для салонов красоты
@@ -79,9 +73,7 @@ public class MainSalonActivity extends ActionBarActivity{
                     public void onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
                         try {
 
-
                             switch (iDrawerItem.getIdentifier()) {
-
 
                                 case 2:
                                     Intent intentHair = new Intent(getApplicationContext(), HairSalonActivity.class);
@@ -116,12 +108,7 @@ public class MainSalonActivity extends ActionBarActivity{
                 })
                 .build();
 
-
                     res.setSelection(9);
-
-
-
-
     }
 
     //Обработчик для кнопки "Ногти" - переходим на активность с выбором услуг "Маникюр и Педикюр"

@@ -5,22 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <!--Подключаем фрагмент "шапки"-->
     <fragment android:name="ru.tentacles.iris.fragments.headerLogoFragment"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         tools:layout="@layout/header_logo"
         android:id="@+id/fragment_header_logo"/>
 
+    <!--Подзаголовок раздела-->
    <TextView
        style="@style/txt_subtitle"
        android:text="@string/nails"
        android:id="@+id/subtitle_nails" />
-
-    <!--<View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
-        android:background="#ff09070f" /> -->
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -30,7 +26,7 @@
         android:divider="@drawable/cuteline"
         android:showDividers="none">
 
-
+        <!--Подключаем статический фрагмент слева-->
         <fragment android:name="ru.tentacles.iris.fragments.nail_fragments.nailsLeftFragment"
             android:layout_width="fill_parent"
             android:layout_height="match_parent"
@@ -38,6 +34,7 @@
             android:id="@+id/fragment_nails_left"
             android:layout_weight="1"/>
 
+        <!--Контейнер для динамических фрагментов-->
         <LinearLayout
             android:id="@+id/container"
             android:layout_width="fill_parent"
@@ -50,12 +47,12 @@
             android:divider="@drawable/cuteline"
             android:showDividers="middle|beginning|end">
         </LinearLayout>
+
     </LinearLayout>
 
     <LinearLayout
         style="@style/layout_advert"
         android:layout_height="72dp">
-
     </LinearLayout>
 
 </LinearLayout>

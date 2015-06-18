@@ -13,6 +13,8 @@
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
+
+        <!--Название салона-->
         <TextView
             android:id="@+id/salon_name"
             style="@style/Buttons_block"
@@ -20,21 +22,24 @@
             android:textStyle="bold"
             android:textSize="20sp"
             android:layout_marginBottom="1dp"
-            android:gravity="top" />
+            android:gravity="top"/>
+
+        <!--Иконка отзывов-->
         <ImageButton
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:layout_weight="3"
-            android:background="@color/buttons_block"
+            android:background="@color/layout_secondary"
             android:src="@mipmap/comm_white"
             android:layout_marginBottom="1dp"/>
+
+        <!--Количество отзывов о салоне-->
         <TextView
             android:id="@+id/salon_comm"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             style="@style/Buttons_block"
             android:layout_gravity="bottom"
-            android:background="@color/buttons_block"
             android:layout_weight="3.45"
             android:text="@string/salon_comm"
             android:gravity="bottom"
@@ -50,16 +55,19 @@
         android:baselineAligned="false">
 
         <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:showDividers="end">
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:showDividers="end">
+
             <TextView
                 android:id="@+id/id_salon"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:visibility="gone"/>
+
+            <!--Адрес салона красоты-->
             <TextView
                 android:id="@+id/salon_address"
                 style="@style/Buttons_block"
@@ -69,154 +77,170 @@
                 android:textStyle="italic"
                 android:background="@color/buttons"/>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1">
-            <ImageButton
+            <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:background="@drawable/heart"
-                android:contentDescription="@string/add_favor"
-                android:id="@+id/add_favor"
-                android:onClick="takeCall" />
-            <ImageButton
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:background="@color/buttons"
-                android:layout_weight="1"
-                android:contentDescription="@string/salon_info"
-                android:src="@mipmap/ic_info_black_48dp" />
-            <TextView
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:id="@+id/salon_phone"
-                android:text="@string/phone_number"
-                android:textSize="0sp"
-                android:onClick="takeCall"
-                android:clickable="true"
-                android:background="@mipmap/ic_phone_in_talk" />
+                android:orientation="horizontal"
+                android:layout_weight="1">
+
+                <!--Иконка "Добавить в избранное-->
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/add_favor"
+                    android:id="@+id/add_favor"
+                    android:onClick="takeCall"
+                    android:src="@mipmap/heart_outline"
+                    android:background="@color/buttons"
+                    android:scaleType="center"/>
+
+                <!--Иконка "Доп. информация"-->
+                <ImageButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/buttons"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/salon_info"
+                    android:src="@mipmap/ic_information_outline"/>
+
+                <!--Иконка "Телефонная трубка-->
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:id="@+id/salon_phone"
+                    android:text="@string/phone_number"
+                    android:textSize="0sp"
+                    android:onClick="takeCall"
+                    android:clickable="true"
+                    android:background="@mipmap/ic_phone_in_talk"
+                    android:phoneNumber="false"/>
+            </LinearLayout>
         </LinearLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:orientation="vertical"
-        android:layout_weight="1"
-        android:baselineAligned="true">
-
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_weight="1"
-            android:divider="@drawable/separator">
+            android:baselineAligned="true">
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:divider="@drawable/separator">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <!--Рейтинг салона красоты-->
+                    <TextView
+                        android:id="@+id/rating"
+                        android:text="@string/rare_letter"
+                        style="@style/Buttons_block"
+                        android:gravity="left"
+                        android:background="@color/buttons"/>
+
+                    <TextView
+                        android:id="@+id/salon_rate"
+                        style="@style/Buttons_block"
+                        android:layout_weight="0.5"
+                        android:text="4.5"
+                        android:gravity="center_vertical|right"
+                        android:textSize="30sp"
+                        android:textColor="#ff4f5849"
+                        android:layout_marginBottom="1dp"
+                        android:background="@color/buttons"/>
+                </LinearLayout>
+
                 <TextView
-                    android:id="@+id/rating"
-                    android:text="@string/rare_letter"
+                    android:id="@+id/rate_show"
                     style="@style/Buttons_block"
-                    android:gravity="left"
-                    android:background="@color/buttons"/>
-                <TextView
-                    android:id="@+id/salon_rate"
-                    style="@style/Buttons_block"
-                    android:layout_weight="0.5"
-                    android:text="4.5"
-                    android:gravity="center_vertical|right"
-                    android:textSize="30sp"
+                    android:text="@string/rate_show"
+                    android:textSize="43sp"
+                    android:singleLine="true"
                     android:textColor="#ff4f5849"
-                    android:layout_marginBottom="1dp"
-                    android:background="@color/buttons"/>
+                    android:background="@color/buttons"
+                    android:layout_width="150dp"
+                    android:layout_gravity="bottom"
+                    android:clickable="false" />
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/rate_show"
-                style="@style/Buttons_block"
-                android:text="@string/rate_show"
-                android:textSize="43sp"
-                android:singleLine="true"
-                android:textColor="#ff4f5849"
-                android:background="@color/buttons"
-                android:layout_width="150dp"
-                android:layout_gravity="bottom"
-                android:clickable="false" />
-        </LinearLayout>
-
-        <View
-            android:layout_width="fill_parent"
-            android:layout_height="1dp"
-            android:background="#757575" />
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:orientation="horizontal"
-            android:layout_weight="1"
-            android:focusable="false">
+            <!--Вертикальная разделительная линия-->
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#757575"/>
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
-                android:orientation="vertical"
-                android:layout_weight="1">
-                <TextView
-                    android:id="@+id/cost"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:focusable="false">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1">
+
+                    <!--Ценовой блок-->
+                    <TextView
+                        android:id="@+id/cost"
+                        style="@style/Buttons_block"
+                        android:text="@string/cost_show"
+                        android:layout_margin="0dp"
+                        android:layout_marginTop="2dp"
+                        android:gravity="left"
+                        android:background="@color/buttons"/>
+
+                    <TextView
+                        android:id="@+id/salon_cost"
+                        style="@style/Buttons_block"
+                        android:layout_weight="0.5"
+                        android:text="100"
+                        android:textColor="#ff4f5849"
+                        android:textSize="35sp"
+                        android:layout_margin="0dp"
+                        android:gravity="right"
+                        android:background="@color/buttons"
+                        android:layout_marginBottom="2dp"/>
+
+                </LinearLayout>
+
+                <!--Иконка рубля-->
+                <ImageView
+                    android:id="@+id/cost_show"
                     style="@style/Buttons_block"
-                    android:text="@string/cost_show"
+                    android:clickable="false"
+                    android:src="@drawable/rouble_sign"
                     android:layout_margin="0dp"
                     android:layout_marginTop="2dp"
-                    android:gravity="left"
-                    android:background="@color/buttons"/>
-                <TextView
-                    android:id="@+id/salon_cost"
-                    style="@style/Buttons_block"
-                    android:layout_weight="0.5"
-                    android:text="100"
-                    android:textColor="#ff4f5849"
-                    android:textSize="35sp"
-                    android:layout_margin="0dp"
-                    android:gravity="right"
                     android:background="@color/buttons"
-                    android:layout_marginBottom="2dp" />
+                    android:layout_width="100dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="2dp"
+                    android:scaleType="fitCenter" />
             </LinearLayout>
 
-
-            <ImageView
-                android:id="@+id/cost_show"
-                style="@style/Buttons_block"
-                android:clickable="false"
-                android:src="@drawable/rouble_sign"
-                android:layout_margin="0dp"
-                android:layout_marginTop="2dp"
-                android:background="@color/buttons"
-                android:layout_width="100dp"
-                android:layout_height="43dp"
-                android:layout_gravity="center_vertical"
-                android:layout_marginBottom="2dp" />
         </LinearLayout>
-
     </LinearLayout>
 
-
-    </LinearLayout>
-
-
-
+    <!--Отступ, для разделения пунктов списка-->
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="10dp"
         android:orientation="horizontal"
         android:background="#FAFAFA">
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="0.5dp"

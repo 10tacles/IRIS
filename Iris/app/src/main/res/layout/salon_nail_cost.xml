@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <!--Слой для вывода салонов и стоимости услуг-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -35,17 +36,13 @@
         android:text="@string/block_name" />
 
     <fragment android:name="ru.tentacles.iris.fragments.CostSalonsFragment"
-
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-
-
-            tools:layout="@layout/list_item"
-            android:id="@+id/CostSalonsFragment">
-
-
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout="@layout/list_item"
+        android:id="@+id/CostSalonsFragment">
     </fragment>
+
 </LinearLayout>
 
 

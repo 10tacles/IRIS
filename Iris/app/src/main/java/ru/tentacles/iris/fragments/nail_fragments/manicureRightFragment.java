@@ -1,6 +1,5 @@
 package ru.tentacles.iris.fragments.nail_fragments;
 
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -13,9 +12,7 @@ import ru.tentacles.iris.R;
 //Классический -- Европейский -- Аппаратный и т.д.
 public class manicureRightFragment  extends ListFragment{
 
-
     public static final String TAG = "manicureRightFragmentTAG";
-
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -30,8 +27,6 @@ public class manicureRightFragment  extends ListFragment{
                 android.R.layout.simple_list_item_1);
         setListAdapter(mAdapter);
 
-
-
     }
 
     //Обработчик кнопок. Нажатие на любую кнопку из списка
@@ -43,6 +38,6 @@ public class manicureRightFragment  extends ListFragment{
         Intent in = new Intent(getActivity(), ManicureCostFragment.class);
         in.putExtra("manicure", position);
         startActivity(in);
-
     }
+
 }

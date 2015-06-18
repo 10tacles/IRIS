@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Первый вариант цветов-->
     <color name="line_color">#000000</color>
     <color name="right_fragment">#ffbfae8b</color>
     <color name="body_color">#ffeecb</color>
 
+
+    <!--Второй вариант цветов-->
     <!--Цвет шапки-->
     <color name="buttons_head">#2196F3</color>
     <color name="layout_head">#2196F3</color>
     <!--Цвет текста в шапке-->
     <color name="text_head">#FAFAFA</color>
-
     <!--Цвет текста и кнопок в активности выбора цены-->
     <color name="text_block">#0B5E9E</color>
     <color name="buttons_block">#B3C6F9</color>
 
     <!--Цвет тела и кнопок-->
    <!-- <color name="layout_body">#4083B6</color> -->
-
     <color name="buttons">#B2EBF2</color>
     <!--<color name="layout_body">#4f23fc</color>-->
 
 
-    <!--Цвет текста и кнопок 2-е состояние, подблоки-->
+    <!--Третий вариант. Цвет текста и кнопок 2-е состояние, подблоки-->
     <color name="text_primary">#DE000000</color>
     <color name="text_secondary">#8A000000</color>
     <color name="text_color">#757575</color>
