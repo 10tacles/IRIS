@@ -17,6 +17,13 @@
        style="@style/txt_subtitle"
        android:text="@string/nails"
        android:id="@+id/subtitle_nails" />
+    <!--Тень под тулбар-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/toolbar_dropshadow"
+        android:layout_below="@+id/toolbar"
+         />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,9 +36,11 @@
         <!--Подключаем статический фрагмент слева-->
         <fragment android:name="ru.tentacles.iris.fragments.nail_fragments.nailsLeftFragment"
             android:layout_width="fill_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             tools:layout="@layout/nails_fragm_left"
             android:id="@+id/fragment_nails_left"
+
+            style="@style/layout_secondary"
             android:layout_weight="1"/>
 
         <!--Контейнер для динамических фрагментов-->

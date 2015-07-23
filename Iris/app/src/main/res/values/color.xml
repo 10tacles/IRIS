@@ -28,7 +28,17 @@
     <color name="text_color">#757575</color>
     <color name="buttons_second">#FAFAFA</color>
     <color name="buttons_pressed">#EEEEEE</color>
+
+
     <color name="layout_secondary">#E0E0E0</color>
     <color name="layout_body">#FAFAFA</color>
+
+    <!--Цвет для статус бара (полоска сверху)-->
+    <color name="colorPrimaryDark">#E0E0E0</color>
+    <!--Цвет для тулбара-->
+    <color name="colorPrimary">#3EB5F1</color>
+
+    <!--Акцентирующий цвет-->
+    <color name="colorAccent">#3EB5F1</color>
 
 </resources>

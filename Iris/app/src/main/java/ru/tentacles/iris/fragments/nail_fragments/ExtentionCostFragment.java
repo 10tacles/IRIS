@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -18,6 +19,7 @@ import android.widget.TextView;
 
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
@@ -45,7 +47,7 @@ import ru.tentacles.iris.fragments.CostSalonsFragment;
 import ru.tentacles.iris.fragments.NullCostActivity;
 import ru.tentacles.iris.parser.JSONParser;
 
-public class ExtentionCostFragment extends ActionBarActivity{
+public class ExtentionCostFragment extends AppCompatActivity{
 
     //Блок объявления значений и переменных.
     TextView block_name;
@@ -91,9 +93,11 @@ public class ExtentionCostFragment extends ActionBarActivity{
         toolbar.setTitleTextColor(getResources().getColor(R.color.buttons_second));
 
         //Инициализируем навигационное меню
-        Drawer.Result res = new Drawer()
+        Drawer res = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
+                .withDisplayBelowToolbar(true)
+                .withActionBarDrawerToggleAnimated(true)
                 .withActionBarDrawerToggle(true)
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
@@ -132,7 +136,7 @@ public class ExtentionCostFragment extends ActionBarActivity{
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
+                    public boolean onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
                         try {
                             switch (iDrawerItem.getIdentifier()){
                                 case 1:
@@ -168,11 +172,12 @@ public class ExtentionCostFragment extends ActionBarActivity{
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                        return false;
                     }
                 })
                 .build();
 
-        res.setSelection(0);
+        res.setSelection(-2);
 
         //Блок инициализации переменных
         block_name = (TextView) findViewById(R.id.block_name);

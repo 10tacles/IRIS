@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/txtName"
+        android:id="@+id/txt_name"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="23dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="16dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtAddress"
+        android:text="@string/txtAddress"
+        android:layout_below="@+id/txt_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMode"
+        android:text="@string/txtMode"
+        android:layout_alignTop="@+id/imageView2"
+        android:layout_alignLeft="@+id/txtAddress"
+        android:layout_alignStart="@+id/txtAddress" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtPhone"
+        android:text="@string/txtPhone"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_alignLeft="@+id/txtMode"
+        android:layout_alignStart="@+id/txtMode" />
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/imageView4"
+        android:layout_alignLeft="@+id/txt_name"
+        android:layout_alignStart="@+id/txt_name"
+        android:src="@mipmap/ic_access_time_grey600_48dp"
+        android:scaleType="center" />
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/imageView3"
+        android:layout_below="@+id/txtMode"
+        android:layout_toLeftOf="@+id/txtMode"
+        android:layout_toStartOf="@+id/txtMode"
+        android:layout_marginLeft="16dp" />
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/imageView4"
+        android:layout_alignBottom="@+id/txtAddress"
+        android:layout_toLeftOf="@+id/txtAddress"
+        android:layout_toStartOf="@+id/txtAddress"
+        android:src="@mipmap/ic_home_grey600_48dp"
+        android:scaleType="center" />
+
+</RelativeLayout>

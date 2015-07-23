@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
@@ -94,9 +95,10 @@ public class EyebrowCostFragment extends ActionBarActivity{
         toolbar.setTitleTextColor(getResources().getColor(R.color.buttons_second));
 
         //Инициализируем навигационное меню
-        Drawer.Result res = new Drawer()
+        Drawer res = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
+                .withDisplayBelowToolbar(true)
                 .withActionBarDrawerToggle(true)
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
@@ -135,7 +137,7 @@ public class EyebrowCostFragment extends ActionBarActivity{
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
+                    public boolean onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
                         try {
 
 
@@ -173,6 +175,7 @@ public class EyebrowCostFragment extends ActionBarActivity{
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                        return false;
                     }
                 })
                 .build();

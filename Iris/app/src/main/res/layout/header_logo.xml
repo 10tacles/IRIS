@@ -8,18 +8,33 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?attr/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:elevation="4dp"
         android:minHeight="?attr/actionBarSize"
         android:paddingTop="@dimen/abc_action_bar_default_padding_material"
         android:transitionName="actionBar"/>
+
+
+
+
+
+        <!--Тень под тулбар-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/toolbar_dropshadow"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignRight="@+id/imageButton"
+            android:layout_alignEnd="@+id/imageButton"
+            android:id="@+id/view" />
+
 
     <ImageButton
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:id="@+id/imageButton"
         android:src="@mipmap/ic_search"
-        android:background="?attr/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:layout_alignWithParentIfMissing="false"
         android:focusable="true"
         android:maxHeight="24dp"

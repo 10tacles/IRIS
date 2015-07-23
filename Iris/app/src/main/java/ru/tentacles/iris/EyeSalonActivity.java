@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -14,6 +15,7 @@ import android.widget.Toast;
 
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
@@ -31,7 +33,7 @@ import ru.tentacles.iris.fragments.eye_fragment.mascaraRightFragment;
 import ru.tentacles.iris.fragments.nail_fragments.manicureRightFragment;
 
 //Активность для блока "Глаза"
-public class EyeSalonActivity extends ActionBarActivity implements View.OnClickListener {
+public class EyeSalonActivity extends AppCompatActivity implements View.OnClickListener {
 
     //Объявляем фрагменты
     private makeupRightFragment MakeupRightFragment;
@@ -68,13 +70,14 @@ public class EyeSalonActivity extends ActionBarActivity implements View.OnClickL
         //Инициализируем тулбар
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitleTextColor(getResources().getColor(R.color.buttons_second));
 
         //Инициализируем навигационное меню
-        Drawer.Result res = new Drawer()
+        Drawer res = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
+                .withDisplayBelowToolbar(true)
                 .withActionBarDrawerToggle(true)
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
@@ -113,7 +116,7 @@ public class EyeSalonActivity extends ActionBarActivity implements View.OnClickL
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
+                    public boolean onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
                         try {
 
 
@@ -131,10 +134,10 @@ public class EyeSalonActivity extends ActionBarActivity implements View.OnClickL
                                     Intent intentNails = new Intent(getApplicationContext(), NailSalonActivity.class);
                                     startActivity(intentNails);
                                     break;
-                                case 4:
-                                    Intent intentEyebrows = new Intent(getApplicationContext(), EyeSalonActivity.class);
-                                    startActivity(intentEyebrows);
-                                    break;
+//                                case 4:
+//                                    Intent intentEyebrows = new Intent(getApplicationContext(), EyeSalonActivity.class);
+//                                    startActivity(intentEyebrows);
+//                                    break;
                                 case 5:
                                     Intent intentBody = new Intent(getApplicationContext(), BodyFaceSalonActivity.class);
                                     startActivity(intentBody);
@@ -151,6 +154,7 @@ public class EyeSalonActivity extends ActionBarActivity implements View.OnClickL
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                        return false;
                     }
                 })
                 .build();
@@ -297,18 +301,18 @@ public class EyeSalonActivity extends ActionBarActivity implements View.OnClickL
 
     }
 
-    //Обработчик для кнопки в виде домика в шапке приложения. Возвращает пользователя
-    //в главную активность
-    public void goHome(View v) {
-        Intent intent = new Intent(getApplicationContext(), MainSalonActivity.class);
-        startActivity(intent);
-    }
-
-    //Обработчик для кнопки в виде стрелки в шапке приложения. Возвращает пользователя
-    //в предыдущую активность
-    public void goBack(View v) {
-        Intent intent = new Intent(getApplicationContext(), MainSalonActivity.class);
-        finish();
-    }
+//    //Обработчик для кнопки в виде домика в шапке приложения. Возвращает пользователя
+//    //в главную активность
+//    public void goHome(View v) {
+//        Intent intent = new Intent(getApplicationContext(), MainSalonActivity.class);
+//        startActivity(intent);
+//    }
+//
+//    //Обработчик для кнопки в виде стрелки в шапке приложения. Возвращает пользователя
+//    //в предыдущую активность
+//    public void goBack(View v) {
+//        Intent intent = new Intent(getApplicationContext(), MainSalonActivity.class);
+//        finish();
+//    }
 }
 

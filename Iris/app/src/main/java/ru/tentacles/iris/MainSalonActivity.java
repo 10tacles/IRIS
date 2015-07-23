@@ -2,8 +2,10 @@ package ru.tentacles.iris;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
+
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.interfaces.Badgeable;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,25 +19,35 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 
 //Главная активность для салонов красоты
-public class MainSalonActivity extends ActionBarActivity{
-    Badgeable header;
+public class MainSalonActivity extends AppCompatActivity{
+
+
 
     //привязываем активность и слой main_salon
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_salon);
-        Badgeable header = (Badgeable)findViewById(R.id.header);
+
         //Инициализируем тулбар
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if (toolbar != null) {
+            setSupportActionBar(toolbar);
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+            //getSupportActionBar().setElevation(10);
+        }
+        assert toolbar != null;
         toolbar.setTitleTextColor(getResources().getColor(R.color.buttons_second));
+        
+
 
         //Инициализируем навигационное меню
-        Drawer.Result res = new Drawer()
+        Drawer res = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
+                .withDisplayBelowToolbar(true)
+                .withActionBarDrawerToggleAnimated(true)
                 .withActionBarDrawerToggle(true)
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
@@ -70,7 +82,7 @@ public class MainSalonActivity extends ActionBarActivity{
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
+                    public boolean onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
                         try {
 
                             switch (iDrawerItem.getIdentifier()) {
@@ -104,11 +116,13 @@ public class MainSalonActivity extends ActionBarActivity{
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                        return false;
                     }
                 })
                 .build();
 
                     res.setSelection(9);
+
     }
 
     //Обработчик для кнопки "Ногти" - переходим на активность с выбором услуг "Маникюр и Педикюр"

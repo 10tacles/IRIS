@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
@@ -39,9 +40,10 @@ public class NullCostActivity extends ActionBarActivity{
         toolbar.setTitleTextColor(getResources().getColor(R.color.buttons_second));
 
         //Инициализируем навигационное меню
-        Drawer.Result res = new Drawer()
+        Drawer res = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
+                .withDisplayBelowToolbar(true)
                 .withActionBarDrawerToggle(true)
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
@@ -80,7 +82,7 @@ public class NullCostActivity extends ActionBarActivity{
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
+                    public boolean onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
                         try {
                             switch (iDrawerItem.getIdentifier()){
                                 case 1:
@@ -116,6 +118,7 @@ public class NullCostActivity extends ActionBarActivity{
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                        return false;
                     }
                 })
                 .build();

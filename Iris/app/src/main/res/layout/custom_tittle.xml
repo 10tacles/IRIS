@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/text_color"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="23dp"
+        android:layout_height="28dp"
+        android:id="@+id/imageView"
+        android:baselineAlignBottom="false"
+        android:src="@mipmap/logo_logo"
+        android:scaleType="fitCenter"
+        android:layout_weight="0.02" />
+
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/buttons_second"
+        android:text="@string/warn"
+        android:textSize="20sp"
+        android:autoText="false">
+    </TextView>
+
+</LinearLayout>

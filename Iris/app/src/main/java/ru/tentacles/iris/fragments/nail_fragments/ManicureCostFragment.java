@@ -2,13 +2,16 @@ package ru.tentacles.iris.fragments.nail_fragments;
 
 
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -17,6 +20,7 @@ import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import com.mikepenz.iconics.typeface.FontAwesome;
 import com.mikepenz.materialdrawer.Drawer;
+import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
@@ -41,7 +45,7 @@ import ru.tentacles.iris.fragments.CostSalonsFragment;
 import ru.tentacles.iris.fragments.NullCostActivity;
 import ru.tentacles.iris.parser.JSONParser;
 
-public class ManicureCostFragment extends ActionBarActivity{
+public class ManicureCostFragment extends AppCompatActivity{
 
     //Блок объявления значений и переменных.
     TextView block_name;
@@ -90,13 +94,15 @@ public class ManicureCostFragment extends ActionBarActivity{
         //Инициализируем тулбар
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         toolbar.setTitleTextColor(getResources().getColor(R.color.buttons_second));
 
         //Инициализируем навигационное меню
-        Drawer.Result res = new Drawer()
+        Drawer res = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
+                .withDisplayBelowToolbar(true)
+                .withActionBarDrawerToggleAnimated(true)
                 .withActionBarDrawerToggle(true)
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
@@ -135,7 +141,7 @@ public class ManicureCostFragment extends ActionBarActivity{
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
+                    public boolean onItemClick(AdapterView<?> adapterView, View view, int position, long l, IDrawerItem iDrawerItem) {
                         try {
                             switch (iDrawerItem.getIdentifier()){
                                 case 1:
@@ -167,15 +173,18 @@ public class ManicureCostFragment extends ActionBarActivity{
                                     Intent intentMen = new Intent(getApplicationContext(), MenSalonActivity.class);
                                     startActivity(intentMen);
                                     break;
+                                default:
+                                    break;
                             }
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
+                        return false;
                     }
                 })
                 .build();
 
-        res.setSelection(0);
+        res.setSelection(-2);
 
         //В фоновом потоке передаем на сервер id
         //требуемой услуги
@@ -251,56 +260,102 @@ public class ManicureCostFragment extends ActionBarActivity{
             List<NameValuePair> param = new ArrayList<NameValuePair>();
 
             //Получаем JSON строк с URL
-            JSONObject json = jsonParser.makeHttpRequest(update_salon, "GET", param);
 
             try {
-                //Получаем SUCCESS тег для проверки статуса ответа от сервера
-                int success = json.getInt(TAG_SUCCESS);
+                //Получаем JSON строк с URL
+                JSONObject json = jsonParser.makeHttpRequest(update_salon, "GET", param);
 
-                if (success == 1) {
-                    //Салоны найдены
-                    //Получаем массив из салонов
-                    mClassic = json.getJSONArray(TAG_SALONS);
+                try {
+                    //Получаем SUCCESS тег для проверки статуса ответа от сервера
+                    int success = json.getInt(TAG_SUCCESS);
 
-                    //Перебор всех салонов
-                    for (int i = 0; i < mClassic.length(); i++) {
-                        JSONObject c = mClassic.getJSONObject(i);
+                    if (success == 1) {
+                        //Салоны найдены
+                        //Получаем массив из салонов
+                        mClassic = json.getJSONArray(TAG_SALONS);
 
-                        //Сохраняем каждый json элемент в переменную
-                        String id = c.getString(TAG_id);
-                        String name = c.getString(TAG_name);
-                        String address = c.getString(TAG_address);
-                        String cost = c.getString(TAG_cost);
-                        String rate = c.getString(TAG_rate);
-                        String comm = c.getString(TAG_comm);
-                        String phone = c.getString(TAG_phone);
+                        //Перебор всех салонов
+                        for (int i = 0; i < mClassic.length(); i++) {
+                            JSONObject c = mClassic.getJSONObject(i);
 
-                        //Создаем новый HashMap - хранение данных
-                        //типа "Ключ", "Значение"
-                        HashMap<String, String> map = new HashMap<String, String>();
+                            //Сохраняем каждый json элемент в переменную
+                            String id = c.getString(TAG_id);
+                            String name = c.getString(TAG_name);
+                            String address = c.getString(TAG_address);
+                            String cost = c.getString(TAG_cost);
+                            String rate = c.getString(TAG_rate);
+                            String comm = c.getString(TAG_comm);
+                            String phone = c.getString(TAG_phone);
 
-                        //Добавляем каждый элемент в HashMap ключ => значение
-                        map.put(TAG_id, id);
-                        map.put(TAG_name, name);
-                        map.put(TAG_address, address);
-                        map.put(TAG_cost, cost);
-                        map.put(TAG_rate, rate);
-                        map.put(TAG_comm, comm);
-                        map.put(TAG_phone, phone);
+                            //Создаем новый HashMap - хранение данных
+                            //типа "Ключ", "Значение"
+                            HashMap<String, String> map = new HashMap<>();
 
-                        //Добавляем HashList в ArrayList
-                        mClassicList.add(map);
+                            //Добавляем каждый элемент в HashMap ключ => значение
+                            map.put(TAG_id, id);
+                            map.put(TAG_name, name);
+                            map.put(TAG_address, address);
+                            map.put(TAG_cost, cost);
+                            map.put(TAG_rate, rate);
+                            map.put(TAG_comm, comm);
+                            map.put(TAG_phone, phone);
+
+                            //Добавляем HashList в ArrayList
+                            mClassicList.add(map);
+
+                        }
+                    } else {
+                        //Если салоны по какой-либо услуге
+                        //не найдены, то пользователю выводим
+                        //соответствующее сообщение
+                        ManicureCostFragment.this.runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(ManicureCostFragment.this);
+
+                                builder.setTitle("Внимание!")
+                                        .setMessage(getResources().getString(R.string.empty))
+                                        .setCancelable(false)
+                                        .setIcon(R.mipmap.logo_logo)
+                                        .setNegativeButton("Oк", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                finish();
+                                            }
+                                        });
+                                AlertDialog alert = builder.create();
+                                alert.show();
+                            }
+                        });
+
                     }
-                } else {
-                    //Если салоны по какой-либо услуге
-                    //не найдены, то пользователю выводим
-                    //соответствующее сообщение
-                    Intent on = new Intent(getApplicationContext(), NullCostActivity.class);
-                    startActivity(on);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
                 }
 
-            } catch (JSONException e) {
+            } catch (Exception e) {
+                //Если подключения к сети нет, то
+                //выводим сообщение
                 e.printStackTrace();
+                ManicureCostFragment.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        AlertDialog.Builder builder = new AlertDialog.Builder(ManicureCostFragment.this);
+                        builder.setTitle("Соединение с сервером отсутствует!")
+                                .setMessage(getResources().getString(R.string.warning))
+                                .setCancelable(false)
+                                .setIcon(R.mipmap.logo_logo)
+                                .setNegativeButton("Oк", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+                                        finish();
+                                    }
+                                });
+                        AlertDialog alert = builder.create();
+                        alert.show();
+                    }
+                });
             }
             return null;
         }

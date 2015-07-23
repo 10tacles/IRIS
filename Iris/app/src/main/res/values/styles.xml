@@ -3,13 +3,15 @@
     <!-- Основная тема приложения -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
-
+        <item name="colorPrimary">@color/colorPrimary</item>
     </style>
     <!--Переназначение цвета для иконки Navigation Drawer-->
     <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@color/buttons_second</item>
     </style>
+
+
 
 <!--Кнопки первого состояния, мейнактивити-->
     <style name="Buttons">
@@ -35,8 +37,8 @@
         <item name="android:textColor">@color/text_primary</item>
         <item name="android:layout_gravity">center_vertical|center_horizontal</item>
         <item name="android:gravity">fill_vertical</item>
-
     </style>
+
 
     <!--Текстовое поле подзаголовков второго состояния-->
     <style name="txt_subtitle">
@@ -67,6 +69,11 @@
     <!--Стиль: список салонов + цены + рейтинг-->
     <style name="layout_block">
         <item name="android:background">@color/buttons</item>
+    </style>
+
+    <!--Стиль: 2-е состояние, фрагмент слева-->
+    <style name="layout_secondary">
+        <item name="android:background">@color/layout_secondary</item>
     </style>
 
     <!--Для рекламы-->

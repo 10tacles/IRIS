@@ -69,6 +69,11 @@
         <activity android:name=".MenSalonActivity"
             android:screenOrientation="portrait"/>
 
+
+        <!--Регистрируем 4-е состояние приложения "Доп. инфо"-->
+        <activity android:name=".InfoActivity"
+            android:screenOrientation="portrait"/>
+
     </application>
 
     <!--Разрешения для приложения-->

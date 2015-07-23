@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -13,7 +14,8 @@
         <fragment android:name="ru.tentacles.iris.fragments.headerLogoFragment"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/fragment_header_logo" />
+            android:id="@+id/fragment_header_logo"
+            tools:layout="@layout/header_logo" />
     </LinearLayout>
 
     <TextView
@@ -21,9 +23,11 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:id="@+id/textView"
-        style="@style/ButtonsSecond"
-        android:layout_gravity="center_horizontal"
-        android:text="@string/empty" />
+        android:textColor="@color/text_color"
+        android:textSize="20sp"
+        android:text="@string/empty"
+        android:gravity="center"
+        android:layout_marginTop="150dp" />
 
 
 </LinearLayout>

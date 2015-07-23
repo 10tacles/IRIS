@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--<style name="CustomTheme" parent="MaterialDrawerTheme.Light">-->
+        <!--&lt;!&ndash; colorPrimary is used for the default action bar background &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+
+        <!--&lt;!&ndash; colorPrimaryDark is used for the status bar &ndash;&gt;-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+
+        <!--&lt;!&ndash; colorAccent is used as the default value for colorControlActivated,-->
+             <!--which is used to tint widgets &ndash;&gt;-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+
+        <!--&lt;!&ndash; You can also set colorControlNormal, colorControlActivated-->
+             <!--colorControlHighlight, and colorSwitchThumbNormal. &ndash;&gt;-->
+
+    <!--</style>-->
+    <!--<style name="ColorPrimary" parent="MaterialDrawerTheme">-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+    <!--</style>-->
+</resources>

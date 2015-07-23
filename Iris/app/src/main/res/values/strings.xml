@@ -56,6 +56,19 @@
     <string name="iris_name">IRIS</string>
     <string name="empty">Пока что нет салонов, предоставляющих данную услугу...</string>
     <string name="phone_number" />
+    <string name="warning">Проверьте подключение к сети Интернет и повторите попытку.</string>
+    <string name="warn">Внимание!</string>
+    <string name="txt_name">Large Text</string>
+
+
+    <!--Для четвертого состояния-->
+    <string name="txtName">Знатный салон имени Гайдая</string>
+    <string name="txtAddress">ул. Красноармейская, 25</string>
+    <string name="txtMode">Пн-Сб: 09.00-21.00 Вс: 10.00-17.00</string>
+    <string name="txtRating">4,5</string>
+    <string name="txtComm">14</string>
+    <string name="txtPhone">566556</string>
+    <string name="txtPhoneNum">Телефон:</string>
 
 
 </resources>

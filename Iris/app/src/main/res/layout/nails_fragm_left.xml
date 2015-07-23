@@ -13,29 +13,59 @@
     android:showDividers="middle|end"
     android:focusable="true">
 
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple_manicure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
     <Button
         android:text="@string/manicure"
         android:id="@+id/manicure"
         style="@style/ButtonsSecond"
-        android:onClick="onClick"
-        android:background="@drawable/button_press"/>
+        android:onClick="onClick"/>
+        <!--android:background="@drawable/button_press"-->
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple_pedicure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <Button
         android:text="@string/pedicure"
         android:id="@+id/pedicure"
-        style="@style/ButtonsSecond"
-        android:background="@drawable/button_press"/>
+        style="@style/ButtonsSecond"/>
 
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple_shellac"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <Button
         android:text="@string/nail"
         android:id="@+id/nail"
-        style="@style/ButtonsSecond"
-        android:background="@drawable/button_press"/>
+        style="@style/ButtonsSecond"/>
 
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple_nail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <Button
         style="@style/ButtonsSecond"
         android:text="@string/nail_extention"
-        android:id="@+id/nail_extention"
-        android:background="@drawable/button_press"/>
+        android:id="@+id/nail_extention"/>
 
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <!--Тень под тулбар-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/toolbar_dropshadow"
+        android:id="@+id/view" />
 </LinearLayout>
